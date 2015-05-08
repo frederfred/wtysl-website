@@ -1,0 +1,29 @@
+@mixin grid($center: false) {
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
+
+  font-size: 0;
+
+  @if $center {
+    text-align: center;
+  }
+}
+
+@mixin grid-columns($count, $center: false) {
+  display: inline-block;
+
+  @if $center {
+    width: 100%;
+    max-width: (100% / $grid-columns) * $count;
+    text-align: left;
+  } @else {
+    width: (100% / $grid-columns) * $count;
+  }
+
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+
+  font-size: $base-font-size;
+
+  vertical-align: top;
+}

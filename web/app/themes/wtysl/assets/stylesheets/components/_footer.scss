@@ -1,0 +1,52 @@
+//
+// Component: Footer
+// =============================================================================
+
+$component-name: "Footer";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  padding: 20px 0;
+  background: $color-brightness-20;
+
+  margin-top: $space-xl;
+
+  &,
+  a {
+    color: $color-white;
+  }
+
+  &-inner {
+    @extend %clearfix;
+  }
+
+  &-contact {
+    @extend %reset-list;
+
+    @include breakpoint($x-large) {
+      float: left;
+    }
+  }
+
+  &-contactItem {
+    display: inline-block;
+
+    &:after {
+      content: " | "
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &-newsletter {
+    @include breakpoint($x-large) {
+      float: right;
+
+      text-align: right;
+    }
+  }
+}

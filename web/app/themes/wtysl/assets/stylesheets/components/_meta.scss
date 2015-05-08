@@ -1,0 +1,11 @@
+//
+// Component: Meta
+// =============================================================================
+
+$component-name: "Meta";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  font-size: 14px;
+  color: $color-brightness-50;
+}

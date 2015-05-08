@@ -1,0 +1,11 @@
+$space: (
+  s: $gutter / 2,
+  m: $gutter,
+  l: $gutter * 2,
+  xl: $gutter * 4
+);
+
+$space-s: map-get($space, s);
+$space-m: map-get($space, m);
+$space-l: map-get($space, l);
+$space-xl: map-get($space, xl);

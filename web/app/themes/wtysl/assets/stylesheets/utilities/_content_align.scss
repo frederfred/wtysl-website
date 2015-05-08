@@ -1,0 +1,32 @@
+%content-align {
+  margin-bottom: $gutter;
+}
+
+.u-contentAlign {
+  &Left {
+    @extend %content-align;
+
+    float: left;
+
+    margin-right: $gutter;
+  }
+
+  &Right {
+    @extend %content-align;
+
+    float: right;
+
+    margin-left: $gutter;
+
+    text-align: right;
+  }
+
+  &Center {
+    @extend %content-align;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+}

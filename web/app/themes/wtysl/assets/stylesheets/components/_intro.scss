@@ -1,0 +1,11 @@
+//
+// Component: Intro
+// =============================================================================
+
+$component-name: "Intro";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  font-size: 24px;
+  text-align: center;
+}

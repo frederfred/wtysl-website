@@ -1,0 +1,91 @@
+//
+// Component: Media Intro
+// =============================================================================
+
+$component-name: "MediaIntro";
+$component-base: ".#{$component-name}";
+
+%flex-embed-padding {
+  padding-top: intrinsic-ratio(16, 9);
+}
+
+#{$component-base} {
+  position: relative;
+
+  // Element: Media Wrapper
+  // ---------------------------------------------------------------------------
+  &-mediaWrapper {
+    @extend %flex-embed;
+    @extend %flex-embed-padding;
+  }
+
+  // Element: Media
+  // ---------------------------------------------------------------------------
+  &-media {
+    @extend %flex-embed-item;
+  }
+
+  // Element: Text Wrapper
+  // ---------------------------------------------------------------------------
+  &-textWrapper {
+    @extend %flex-embed;
+    @extend %flex-embed-padding;
+
+    @include breakpoint($small) {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  // Element: Text
+  // ---------------------------------------------------------------------------
+  &-text {
+    @extend %flex-embed-item;
+
+    @include breakpoint($small) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Element: Text Inner
+  // ---------------------------------------------------------------------------
+  &-textInner {
+    text-align: center;
+
+    @include breakpoint(0 $to-small) {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+    @include breakpoint($small) {
+      flex: none;
+
+      width: 50%;
+
+      color: $color-white;
+    }
+  }
+
+  // Element: Headline
+  // ---------------------------------------------------------------------------
+  &-headline {
+    @include breakpoint($medium) {
+      font-size: 80px;
+    }
+  }
+
+  // Element: Body
+  // ---------------------------------------------------------------------------
+  &-body {
+    margin-bottom: $space-m;
+    @include breakpoint($medium) {
+      font-size: 24px;
+    }
+  }
+}

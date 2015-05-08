@@ -1,0 +1,33 @@
+// Colors
+// -----------------------------------------------------------------------------
+$color-black: #222;
+$color-blue: #00c;
+$color-brightness-20: #333;
+$color-brightness-50: #808080;
+$color-white: #fff;
+
+
+// Sizes
+$base-font-size: 16px;
+$base-font-line-height: 1.4;
+
+$site-max-width: 1400px;
+$gutter: 16px;
+
+
+// Grid
+$grid-columns: 12;
+
+
+// Breakpoints
+// -----------------------------------------------------------------------------
+$x-small: 340px;
+$small: 450px;
+$medium: 768px;
+$large: 910px;
+$x-large: 1200px;
+$to-x-small: $x-small - 1;
+$to-small: $small - 1;
+$to-medium: $medium - 1;
+$to-large: $large - 1;
+$to-x-large: $x-large - 1;

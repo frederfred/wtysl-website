@@ -1,0 +1,62 @@
+html,
+input,
+button,
+select,
+textarea {
+  color: $color-black;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: $base-font-size;
+  line-height: $base-font-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: $color-blue;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+p,
+ul,
+ol {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}

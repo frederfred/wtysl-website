@@ -1,0 +1,17 @@
+@mixin breakpoint($query) {
+  $space-index: str-index(#{$query}, " ");
+
+  @if $space-index {
+    $query-length: str-length(#{$query});
+    $min-width: str-slice(#{$query}, 0, $space-index);
+    $max-width: str-slice(#{$query}, $space-index, $query-length);
+
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $query) {
+      @content;
+    }
+  }
+}

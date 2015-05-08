@@ -1,0 +1,16 @@
+@function intrinsic-ratio($width, $height) {
+  @return percentage($height/$width);
+}
+
+// Mixin: Create a ratio modifier class
+@mixin intrinsic-ratio-class($width, $height, $before: true) {
+  $selector: "--#{$width}by#{$height}";
+
+  @if $before {
+    $selector: "#{$selector}:before";
+  }
+
+  &#{$selector} {
+    padding-top: intrinsic-ratio($width, $height);
+  }
+}

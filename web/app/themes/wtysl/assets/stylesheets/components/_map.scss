@@ -1,0 +1,15 @@
+//
+// Component: Map
+// =============================================================================
+
+$component-name: "Map";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  width: 100%;
+  height: 500px;
+
+  img {
+    max-width: none;
+  }
+}
