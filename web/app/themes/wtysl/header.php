@@ -20,7 +20,7 @@
       <nav class="Wrapper">
         <ul class="MainNav">
           <li class="MainNav-item">
-            <a href="<?php echo site_url(); ?>" class="Logotype">
+            <a href="<?php echo home_url(); ?>" class="Logotype">
               <img src="//placehold.it/300x150&amp;text=WTYSL" alt="What Took You So Long?">
             </a>
           </li>
