@@ -1,5 +1,5 @@
-var publicAssets = "./public/assets";
-var sourceFiles  = "./assets";
+var publicAssets = "./web/app/themes/wtysl/public/assets";
+var sourceFiles = "./web/app/themes/wtysl/assets";
 
 module.exports = {
   publicAssets: publicAssets,
