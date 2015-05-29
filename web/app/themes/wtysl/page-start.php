@@ -27,7 +27,6 @@
             <?php echo get_instagram_feed(); ?>
           </div>
         </div>
-
     <?php endwhile; ?>
   <?php endif; ?>
 <?php get_footer(); ?>
