@@ -10,6 +10,7 @@ require "includes/libs/instagram/instagram_feed.php";
 require "includes/walkers/main_nav.php";
 
 # Custom post types
+require "includes/post_types/co_worker.php";
 require "includes/post_types/project.php";
 
 # Helpers
