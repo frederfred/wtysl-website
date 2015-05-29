@@ -29,6 +29,7 @@ vendor/*
 
 # Node Package Manager
 node_modules
+npm-debug.log
 
 # Vagrant
 bin
