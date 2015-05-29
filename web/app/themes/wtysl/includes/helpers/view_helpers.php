@@ -55,3 +55,20 @@ function include_partial($name, $data) {
 
   return $content;
 }
+
+/**
+ * Get a new instance of WP_Query from any post type.
+ * @param string $post_type
+ * @param int $per_page
+ * @param string $order
+ * @return object
+ */
+function get_archive_posts($post_type, $per_page = 5, $order = "DESC") {
+  return new WP_Query(
+    array(
+      "post_type" => $post_type,
+      "posts_per_page" => $per_page,
+      "order" => $order,
+    )
+  );
+}
