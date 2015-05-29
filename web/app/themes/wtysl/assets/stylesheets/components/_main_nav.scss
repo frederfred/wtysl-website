@@ -1,0 +1,30 @@
+//
+// Component: MainNav
+// =============================================================================
+
+$component-name: "MainNav";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  @extend %reset-list;
+
+  font-size: 0;
+
+  // Element: Item
+  // ---------------------------------------------------------------------------
+  &-item {
+    display: inline-block;
+
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Element: Link
+  // ---------------------------------------------------------------------------
+  &-link {
+    font-size: $base-font-size;
+  }
+}

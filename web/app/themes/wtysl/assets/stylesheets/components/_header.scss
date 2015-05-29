@@ -6,29 +6,5 @@ $component-name: "Header";
 $component-base: ".#{$component-name}";
 
 #{$component-base} {
-  // Element: Nav List
-  // ---------------------------------------------------------------------------
-  &-navList {
-    @extend %reset-list;
-
-    font-size: 0;
-  }
-
-  // Element: Nav Item
-  // ---------------------------------------------------------------------------
-  &-navItem {
-    display: inline-block;
-
-    margin-right: 20px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  // Element: Nav Link
-  // ---------------------------------------------------------------------------
-  &-navLink {
-    font-size: $base-font-size;
-  }
+  //
 }

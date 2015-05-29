@@ -18,8 +18,8 @@
 
     <header class="Header" role="banner">
       <nav class="Wrapper">
-        <ul class="Header-navList">
-          <li class="Header-navItem">
+        <ul class="MainNav">
+          <li class="MainNav-item">
             <a href="<?php echo site_url(); ?>" class="Logotype">
               <img src="//placehold.it/300x150&amp;text=WTYSL" alt="What Took You So Long?">
             </a>
