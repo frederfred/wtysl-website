@@ -16,21 +16,28 @@
 
     <?php get_template_part("partials/browser_upgrade"); ?>
 
-    <header class="Header">
-      <div class="Wrapper">
-        <?php
-          wp_nav_menu(
-            array(
-              "theme_location"  => "main",
-              "menu"            => "main",
-              "items_wrap"      => '%3$s',
-              "container"       => false,
-              "depth"           => 3,
-              "walker"          => new Main_Nav_Walker_Nav_Menu
-            )
-          );
-        ?>
-      </div>
+    <header class="Header" role="banner">
+      <nav class="Wrapper">
+        <ul class="Header-navList">
+          <li class="Header-navItem">
+            <a href="<?php echo site_url(); ?>" class="Logotype">
+              <img src="//placehold.it/300x150&amp;text=WTYSL" alt="What Took You So Long?">
+            </a>
+          </li>
+          <?php
+            wp_nav_menu(
+              array(
+                "theme_location"  => "main",
+                "menu"            => "main",
+                "items_wrap"      => '%3$s',
+                "container"       => false,
+                "depth"           => 3,
+                "walker"          => new Main_Nav_Walker_Nav_Menu
+              )
+            );
+          ?>
+        </ul>
+      </nav>
     </header>
 
     <main id="main" role="main" class="Main" tabindex="-1">
