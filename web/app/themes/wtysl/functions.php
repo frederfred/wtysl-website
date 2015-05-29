@@ -9,6 +9,9 @@ require "includes/libs/instagram/instagram_feed.php";
 # Walkers
 require "includes/walkers/main_nav.php";
 
+# Custom post types
+require "includes/post_types/project.php";
+
 # Helpers
 require "includes/helpers/view_helpers.php";
 
