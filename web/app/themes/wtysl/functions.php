@@ -3,6 +3,9 @@
 # Nav menus
 register_nav_menu("main", "Main navigation");
 
+# Libs
+require "includes/libs/instagram/instagram_feed.php";
+
 # Walkers
 require "includes/walkers/main_nav.php";
 
