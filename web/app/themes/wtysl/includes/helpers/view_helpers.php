@@ -30,3 +30,28 @@ function get_instagram_feed() {
 
   return $instagram_feed->render();
 }
+
+/**
+ * Render a partial with data
+ * @param string $name Template name
+ * @param array data $data Data that gets passed to partial
+ * @return string
+ */
+function include_partial($name, $data) {
+  $file = locate_template(sprintf('%s.php', $name));
+  $data = json_decode(json_encode($data), false); # Convert array to object
+
+  if (!file_exists($file)) {
+    return null;
+  }
+
+  ob_start();
+
+  include $file;
+
+  $content = ob_get_contents();
+
+  ob_end_clean();
+
+  return $content;
+}
