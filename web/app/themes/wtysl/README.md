@@ -1,1 +1,0 @@
-# WTYSL WordPress theme
