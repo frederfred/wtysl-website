@@ -12,7 +12,7 @@ function register_project_post_type() {
       ),
       "public" => true,
       "has_archive" => true,
-      "supports" => array("title", "editor")
+      "supports" => array("title", "editor", "thumbnail")
     )
   );
 }
