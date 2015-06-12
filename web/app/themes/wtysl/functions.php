@@ -18,6 +18,7 @@ require "includes/helpers/view_helpers.php";
 
 # Admin
 require "includes/admin/remove_menu_items.php";
+require "includes/admin/advanced_custom_fields.php";
 
 # Featured images
 add_theme_support("post-thumbnails");
