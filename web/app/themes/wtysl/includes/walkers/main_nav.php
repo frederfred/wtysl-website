@@ -11,6 +11,7 @@ class Main_Nav_Walker_Nav_Menu extends Walker_Nav_Menu {
   public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
     $component_base = "MainNav-";
     $is_current = $item->current_item_ancestor || $item->current_item_parent || $item->current;
+    $item_variants = preg_grep("/^--/", $item->classes);
 
     if ($depth === 0) {
       $component_li_descendent_class = "item";
@@ -24,6 +25,10 @@ class Main_Nav_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 
     $li_classes = $component_base . $component_li_descendent_class;
+
+    foreach ($item_variants as $item_variant) {
+      $li_classes = $li_classes . " " . $component_base . $component_li_descendent_class . $item_variant;
+    }
 
     if ($is_current) {
       $li_classes .= " is-current";
