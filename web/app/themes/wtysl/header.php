@@ -18,27 +18,28 @@
     <?php get_template_part("partials/browser_upgrade"); ?>
 
     <header class="Header" role="banner">
-      <nav class="Wrapper">
-        <ul class="MainNav">
-          <li class="MainNav-item">
-            <a href="<?php echo home_url(); ?>" class="Logotype">
-              <img src="//placehold.it/300x150&amp;text=WTYSL" alt="What Took You So Long?">
-            </a>
-          </li>
-          <?php
-            wp_nav_menu(
-              array(
-                "theme_location"  => "main",
-                "menu"            => "main",
-                "items_wrap"      => '%3$s',
-                "container"       => false,
-                "depth"           => 3,
-                "walker"          => new Main_Nav_Walker_Nav_Menu
-              )
-            );
-          ?>
-        </ul>
-      </nav>
+      <div class="Wrapper">
+        <nav class="MainNav">
+          <a href="<?php echo home_url(); ?>" class="MainNav-logotype">
+            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+          </a>
+
+          <ul class="MainNav-list">
+            <?php
+              wp_nav_menu(
+                array(
+                  "theme_location"  => "main",
+                  "menu"            => "main",
+                  "items_wrap"      => '%3$s',
+                  "container"       => false,
+                  "depth"           => 3,
+                  "walker"          => new Main_Nav_Walker_Nav_Menu
+                )
+              );
+            ?>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main" role="main" class="Main" tabindex="-1">

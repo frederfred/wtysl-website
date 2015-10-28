@@ -5,26 +5,74 @@
 $component-name: "MainNav";
 $component-base: ".#{$component-name}";
 
-#{$component-base} {
-  @extend %reset-list;
+$size: 18px;
+$logotype-width: 84px;
+$item-margin: 20px;
+$item-spacing-logo: 100px;
 
-  font-size: 0;
+#{$component-base} {
+  position: relative;
+
+  height: $base-font-line-height * 3;
+
+  padding-top: $base-font-line-height;
+  padding-bottom: $base-font-line-height;
+
+  text-align: center;
+
+  // Element: Logotype
+  // ---------------------------------------------------------------------------
+  &-logotype {
+    position: absolute;
+
+    left: 50%;
+    top: $base-font-line-height / 2;
+
+    margin-left: ($logotype-width / 2) * -1;
+
+    width: $logotype-width;
+  }
+
+  // Element: List
+  // ---------------------------------------------------------------------------
+  &-list {
+    @extend %reset-list;
+
+    display: inline-block;
+
+    font-size: 0;
+  }
 
   // Element: Item
   // ---------------------------------------------------------------------------
   &-item {
     display: inline-block;
 
-    margin-right: 20px;
+    margin-left: $item-margin;
+    margin-right: $item-margin;
 
-    &:last-child {
-      margin-right: 0;
+    // Variant: Before logo
+    // -------------------------------------------------------------------------
+    &--beforeLogo {
+      margin-right: $item-spacing-logo;
+    }
+
+    // Variant: After logo
+    // -------------------------------------------------------------------------
+    &--afterLogo {
+      margin-left: $item-spacing-logo;
     }
   }
 
   // Element: Link
   // ---------------------------------------------------------------------------
   &-link {
-    font-size: $base-font-size;
+    font-family: $headline-font-family;
+    font-size: $size;
+    color: $color-white;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
