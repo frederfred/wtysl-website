@@ -4,7 +4,7 @@ button,
 select,
 textarea {
   color: $color-black;
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-font-line-height;
   -webkit-font-smoothing: antialiased;
@@ -14,9 +14,10 @@ textarea {
 
 a {
   color: $color-blue;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -46,7 +47,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-family: $headline-font-family;
+  font-weight: normal;
 }
 
 h1,
