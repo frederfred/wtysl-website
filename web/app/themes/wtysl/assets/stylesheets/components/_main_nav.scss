@@ -13,10 +13,10 @@ $item-spacing-logo: 100px;
 #{$component-base} {
   position: relative;
 
-  height: $base-font-line-height * 3;
+  height: $main-nav-height;
 
-  padding-top: $base-font-line-height;
-  padding-bottom: $base-font-line-height;
+  padding-top: $base-line-height;
+  padding-bottom: $base-line-height;
 
   text-align: center;
 
@@ -26,11 +26,13 @@ $item-spacing-logo: 100px;
     position: absolute;
 
     left: 50%;
-    top: $base-font-line-height / 2;
+    top: $base-line-height / 2;
 
     margin-left: ($logotype-width / 2) * -1;
 
     width: $logotype-width;
+
+    z-index: 1;
   }
 
   // Element: List
