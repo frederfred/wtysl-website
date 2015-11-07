@@ -1,0 +1,18 @@
+//
+// Component: Project Item
+// =============================================================================
+
+$component-name: "ProjectItem";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  display: block;
+
+  margin-bottom: $base-line-height * 2;
+
+  // Element: Title
+  // ---------------------------------------------------------------------------
+  &-title {
+    display: none;
+  }
+}

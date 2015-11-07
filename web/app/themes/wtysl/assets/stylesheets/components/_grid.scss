@@ -6,6 +6,26 @@ $component-name: "Grid";
 $component-base: ".#{$component-name}";
 
 #{$component-base} {
+  // Variant: 12 - 6 - 4
+  // ---------------------------------------------------------------------------
+  &--12-6-4 {
+    @include breakpoint($small) {
+      @include grid;
+    }
+
+    // Element: Item
+    // -------------------------------------------------------------------------
+    #{$component-base}-item {
+      @include breakpoint($small $to-large) {
+        @include grid-columns(6);
+      }
+
+      @include breakpoint($large) {
+        @include grid-columns(4);
+      }
+    }
+  }
+
   // Variant: 12 - 6 - 3
   // ---------------------------------------------------------------------------
   &--12-6-3 {
