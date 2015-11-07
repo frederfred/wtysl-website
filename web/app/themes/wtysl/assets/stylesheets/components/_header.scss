@@ -7,4 +7,6 @@ $component-base: ".#{$component-name}";
 
 #{$component-base} {
   background: $color-yellow;
+
+  margin-bottom: $header-margin-bottom;
 }

@@ -5,7 +5,7 @@
 $component-name: "MediaIntro";
 $component-base: ".#{$component-name}";
 
-$media-height: calc(100vh - #{$main-nav-height});
+$media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
 
 %flex-embed-padding {
   padding-top: intrinsic-ratio(16, 9);
@@ -14,7 +14,7 @@ $media-height: calc(100vh - #{$main-nav-height});
 #{$component-base} {
   position: relative;
 
-  height: $media-height;
+  height: calc(#{$media-height});
 
   // Element: Media Wrapper
   // ---------------------------------------------------------------------------
@@ -27,7 +27,7 @@ $media-height: calc(100vh - #{$main-nav-height});
   &-media {
     display: block;
 
-    width: calc(((100vh - #{$main-nav-height}) / 9) * 16);
+    width: calc(((#{$media-height}) / 9) * 16);
     height: 100%;
     max-width: 100%;
 
