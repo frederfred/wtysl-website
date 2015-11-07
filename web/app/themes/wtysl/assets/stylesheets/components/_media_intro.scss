@@ -5,6 +5,8 @@
 $component-name: "MediaIntro";
 $component-base: ".#{$component-name}";
 
+$media-height: calc(100vh - #{$main-nav-height});
+
 %flex-embed-padding {
   padding-top: intrinsic-ratio(16, 9);
 }
@@ -12,16 +14,38 @@ $component-base: ".#{$component-name}";
 #{$component-base} {
   position: relative;
 
+  height: $media-height;
+
   // Element: Media Wrapper
   // ---------------------------------------------------------------------------
   &-mediaWrapper {
-    @extend %flex-embed;
-    @extend %flex-embed-padding;
+    height: $media-height;
   }
 
   // Element: Media
   // ---------------------------------------------------------------------------
   &-media {
+    display: block;
+
+    width: calc(((100vh - #{$main-nav-height}) / 9) * 16);
+    height: 100%;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    border: 0;
+  }
+
+  // Element: Video Wrapper
+  // ---------------------------------------------------------------------------
+  &-videoWrapper {
+    @extend %flex-embed;
+    @extend %flex-embed-padding;
+  }
+
+  // Element: Video
+  // ---------------------------------------------------------------------------
+  &-video {
     @extend %flex-embed-item;
   }
 
@@ -84,6 +108,7 @@ $component-base: ".#{$component-name}";
   // ---------------------------------------------------------------------------
   &-body {
     margin-bottom: $space-m;
+
     @include breakpoint($medium) {
       font-size: 24px;
     }
