@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Permanent+Marker">
     <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/public/assets/stylesheets/application<?php echo minified_extension(); ?>.css?v=<?php echo get_asset_version(); ?>">
 
     <?php wp_head(); ?>

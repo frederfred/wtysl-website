@@ -6,10 +6,7 @@ $component-name: "MediaIntro";
 $component-base: ".#{$component-name}";
 
 $media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
-
-%flex-embed-padding {
-  padding-top: intrinsic-ratio(16, 9);
-}
+$image-opacity: 0.2;
 
 #{$component-base} {
   position: relative;
@@ -22,11 +19,9 @@ $media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
     height: $media-height;
   }
 
-  // Element: Media
+  // Element: Inner
   // ---------------------------------------------------------------------------
-  &-media {
-    display: block;
-
+  &-inner {
     width: calc(((#{$media-height}) / 9) * 16);
     height: 100%;
     max-width: 100%;
@@ -36,25 +31,21 @@ $media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
     border: 0;
   }
 
-  // Element: Video Wrapper
+  // Element: Image Wrapper
   // ---------------------------------------------------------------------------
-  &-videoWrapper {
-    @extend %flex-embed;
-    @extend %flex-embed-padding;
+  &-imageWrapper {
+    background: $color-black;
   }
 
-  // Element: Video
+  // Element: Image
   // ---------------------------------------------------------------------------
-  &-video {
-    @extend %flex-embed-item;
+  &-image {
+    opacity: $image-opacity;
   }
 
   // Element: Text Wrapper
   // ---------------------------------------------------------------------------
   &-textWrapper {
-    @extend %flex-embed;
-    @extend %flex-embed-padding;
-
     @include breakpoint($small) {
       position: absolute;
 
@@ -82,35 +73,51 @@ $media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
   &-textInner {
     text-align: center;
 
-    @include breakpoint(0 $to-small) {
+    @include breakpoint(0 $to-large) {
       padding-left: $gutter;
       padding-right: $gutter;
     }
 
     @include breakpoint($small) {
-      flex: none;
-
-      width: 50%;
-
       color: $color-white;
+    }
+
+    @include breakpoint($large) {
+      width: 80%;
     }
   }
 
   // Element: Headline
   // ---------------------------------------------------------------------------
   &-headline {
+    font-family: $handwriting-font-family;
+    line-height: 0.8;
+    font-size: 50px;
+
     @include breakpoint($medium) {
-      font-size: 80px;
+      margin-bottom: $base-line-height;
+
+      font-size: 100px;
+    }
+
+    @include breakpoint($x-large) {
+      margin-bottom: $base-line-height * 2;
+
+      font-size: 140px;
     }
   }
 
   // Element: Body
   // ---------------------------------------------------------------------------
   &-body {
-    margin-bottom: $space-m;
+    margin-bottom: $base-line-height;
 
     @include breakpoint($medium) {
       font-size: 24px;
+    }
+
+    @include breakpoint($x-large) {
+      margin-bottom: $base-line-height * 2;
     }
   }
 }
