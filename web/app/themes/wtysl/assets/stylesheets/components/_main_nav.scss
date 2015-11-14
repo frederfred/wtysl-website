@@ -5,18 +5,17 @@
 $component-name: "MainNav";
 $component-base: ".#{$component-name}";
 
-$size: 18px;
-$logotype-width: 84px;
-$item-margin: 20px;
-$item-spacing-logo: 100px;
+$height: $base-line-height * 5;
+$link-size: 26px;
+$logotype-width: 106px;
+$logotype-height: $height;
+$item-margin: 40px;
+$item-spacing-logo: 120px;
 
 #{$component-base} {
   position: relative;
 
-  height: $main-nav-height;
-
-  padding-top: $base-line-height;
-  padding-bottom: $base-line-height;
+  height: $height;
 
   text-align: center;
 
@@ -26,7 +25,7 @@ $item-spacing-logo: 100px;
     position: absolute;
 
     left: 50%;
-    top: $base-line-height / 2;
+    top: 0;
 
     margin-left: ($logotype-width / 2) * -1;
 
@@ -41,6 +40,9 @@ $item-spacing-logo: 100px;
     @extend %reset-list;
 
     display: inline-block;
+    position: relative;
+
+    top: ($height / 2) - ($link-size * ($base-line-height / $base-font-size) / 2);
 
     font-size: 0;
   }
@@ -70,8 +72,8 @@ $item-spacing-logo: 100px;
   // ---------------------------------------------------------------------------
   &-link {
     font-family: $headline-font-family;
-    font-size: $size;
-    color: $color-white;
+    font-size: $link-size;
+    color: $color-black;
 
     &:hover {
       text-decoration: none;

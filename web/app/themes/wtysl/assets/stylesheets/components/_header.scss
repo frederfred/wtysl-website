@@ -6,7 +6,6 @@ $component-name: "Header";
 $component-base: ".#{$component-name}";
 
 #{$component-base} {
-  background: $color-yellow;
-
-  margin-bottom: $header-margin-bottom;
+  margin-top: $base-line-height;
+  margin-bottom: $base-line-height;
 }
