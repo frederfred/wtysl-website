@@ -17,7 +17,8 @@ $sizes: (
     logotype-width: 64px,
     logotype-height: $base-line-height * 3,
     item-margin: 20px,
-    item-spacing-logo: 80px
+    item-spacing-logo: 80px,
+    current-border-width: 2px
   ),
   $medium: (
     height: $base-line-height * 4,
@@ -25,7 +26,8 @@ $sizes: (
     logotype-width: 85px,
     logotype-height: $base-line-height * 4,
     item-margin: 30px,
-    item-spacing-logo: 100px
+    item-spacing-logo: 100px,
+    current-border-width: 3px
   ),
   $large: (
     height: $base-line-height * 5,
@@ -33,7 +35,8 @@ $sizes: (
     logotype-width: 106px,
     logotype-height: $base-line-height * 5,
     item-margin: 40px,
-    item-spacing-logo: 120px
+    item-spacing-logo: 120px,
+    current-border-width: 4px
   )
 );
 
@@ -172,6 +175,24 @@ $sizes: (
 
       @include breakpoint(0 $small-medium) {
         margin-right: $shadow-width;
+      }
+    }
+
+    // State: Is Current
+    // -------------------------------------------------------------------------
+    &.is-current {
+      border-bottom: 2px solid $color-white;
+
+      @include breakpoint($small-medium) {
+        border-bottom-color: $color-dark-blue-grey;
+      }
+
+      @each $breakpoint, $val in $sizes {
+        $map: map-get($sizes, $breakpoint);
+
+        @include breakpoint($breakpoint) {
+          border-bottom-width: map-get($map, current-border-width);
+        }
       }
     }
 
