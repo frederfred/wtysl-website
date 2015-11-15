@@ -18,12 +18,11 @@
     <?php get_template_part("partials/browser_upgrade"); ?>
 
     <header class="Header" role="banner">
-      <div class="Wrapper">
-        <nav class="MainNav">
-          <a href="<?php echo home_url(); ?>" class="MainNav-logotype">
-            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
-          </a>
-
+      <nav class="MainNav">
+        <a href="<?php echo home_url(); ?>" class="MainNav-logotype">
+          <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+        </a>
+        <div class="MainNav-listWrapper">
           <ul class="MainNav-list">
             <?php
               wp_nav_menu(
@@ -38,8 +37,8 @@
               );
             ?>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
     <main id="main" role="main" class="Main" tabindex="-1">

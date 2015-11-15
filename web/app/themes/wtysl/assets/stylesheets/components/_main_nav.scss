@@ -5,33 +5,122 @@
 $component-name: "MainNav";
 $component-base: ".#{$component-name}";
 
-$height: $base-line-height * 5;
-$link-size: 26px;
-$logotype-width: 106px;
-$logotype-height: $height;
-$item-margin: 40px;
-$item-spacing-logo: 120px;
+$logotype-width: 42px;
+$logotype-height: 44px;
+$item-margin: 15px;
+$shadow-width: 20px;
+
+$sizes: (
+  $small-medium: (
+    height: $base-line-height * 3,
+    link-size: 18px,
+    logotype-width: 64px,
+    logotype-height: $base-line-height * 3,
+    item-margin: 20px,
+    item-spacing-logo: 80px
+  ),
+  $medium: (
+    height: $base-line-height * 4,
+    link-size: 22px,
+    logotype-width: 85px,
+    logotype-height: $base-line-height * 4,
+    item-margin: 30px,
+    item-spacing-logo: 100px
+  ),
+  $large: (
+    height: $base-line-height * 5,
+    link-size: 26px,
+    logotype-width: 106px,
+    logotype-height: $base-line-height * 5,
+    item-margin: 40px,
+    item-spacing-logo: 120px
+  )
+);
 
 #{$component-base} {
   position: relative;
 
-  height: $height;
+  @include breakpoint($small-medium) {
+    text-align: center;
+  }
 
-  text-align: center;
+  @each $breakpoint, $val in $sizes {
+    $map: map-get($sizes, $breakpoint);
+
+    @include breakpoint($breakpoint) {
+      height: map-get($map, height);
+    }
+  }
+
+  &:before {
+    @include breakpoint(0 $small-medium) {
+      content: "";
+
+      position: absolute;
+
+      z-index: 1;
+
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      width: $shadow-width;
+
+      pointer-events: none;
+
+      background: linear-gradient(to right, rgba($color-dark-blue-grey, 0), rgba($color-dark-blue-grey, 1));
+    }
+  }
 
   // Element: Logotype
   // ---------------------------------------------------------------------------
   &-logotype {
-    position: absolute;
+    @include breakpoint(0 $small-medium) {
+      display: inline-block;
 
-    left: 50%;
-    top: 0;
+      width: $logotype-width;
 
-    margin-left: ($logotype-width / 2) * -1;
+      vertical-align: middle;
+    }
 
-    width: $logotype-width;
+    @include breakpoint($small-medium) {
+      position: absolute;
 
-    z-index: 1;
+      left: 50%;
+      top: 0;
+
+      z-index: 1;
+    }
+
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        width: map-get($map, logotype-width);
+
+        margin-left: (map-get($map, logotype-width) / 2) * -1;
+      }
+    }
+  }
+
+  // Element: List Wrapper
+  // ---------------------------------------------------------------------------
+  &-listWrapper {
+    @include breakpoint(0 $small-medium) {
+      position: absolute;
+
+      left: $logotype-width + $item-margin * 2;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      padding-top: ($logotype-height / 2) - ($base-font-size * ($base-line-height / $base-font-size) / 2);
+
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+
+      white-space: nowrap;
+    }
   }
 
   // Element: List
@@ -39,12 +128,20 @@ $item-spacing-logo: 120px;
   &-list {
     @extend %reset-list;
 
-    display: inline-block;
-    position: relative;
-
-    top: ($height / 2) - ($link-size * ($base-line-height / $base-font-size) / 2);
-
     font-size: 0;
+
+    @include breakpoint($small-medium) {
+      display: inline-block;
+      position: relative;
+    }
+
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        top: (map-get($map, height) / 2) - (map-get($map, link-size) * ($base-line-height / $base-font-size) / 2);
+      }
+    }
   }
 
   // Element: Item
@@ -52,19 +149,54 @@ $item-spacing-logo: 120px;
   &-item {
     display: inline-block;
 
-    margin-left: $item-margin;
-    margin-right: $item-margin;
+    @include breakpoint(0 $small-medium) {
+      margin-left: $item-margin;
+      margin-right: $item-margin;
+    }
+
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        margin-left: map-get($map, item-margin);
+        margin-right: map-get($map, item-margin);
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include breakpoint(0 $small-medium) {
+        margin-right: $shadow-width;
+      }
+    }
 
     // Variant: Before logo
     // -------------------------------------------------------------------------
     &--beforeLogo {
-      margin-right: $item-spacing-logo;
+      @each $breakpoint, $val in $sizes {
+        $map: map-get($sizes, $breakpoint);
+
+        @include breakpoint($breakpoint) {
+          margin-right: map-get($map, item-spacing-logo);
+        }
+      }
     }
 
     // Variant: After logo
     // -------------------------------------------------------------------------
     &--afterLogo {
-      margin-left: $item-spacing-logo;
+      @each $breakpoint, $val in $sizes {
+        $map: map-get($sizes, $breakpoint);
+
+        @include breakpoint($breakpoint) {
+          margin-left: map-get($map, item-spacing-logo);
+        }
+      }
     }
   }
 
@@ -72,8 +204,23 @@ $item-spacing-logo: 120px;
   // ---------------------------------------------------------------------------
   &-link {
     font-family: $headline-font-family;
-    font-size: $link-size;
-    color: $color-black;
+    font-size: $base-font-size;
+
+    @include breakpoint(0 $small-medium) {
+      color: $color-white;
+    }
+
+    @include breakpoint($small-medium) {
+      color: $color-dark-blue-grey;
+    }
+
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        font-size: map-get($map, link-size);
+      }
+    }
 
     &:hover {
       text-decoration: none;
