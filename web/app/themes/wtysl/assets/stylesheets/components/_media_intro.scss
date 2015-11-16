@@ -39,6 +39,8 @@ $sizes: (
   // Element: Image Wrapper
   // ---------------------------------------------------------------------------
   &-imageWrapper {
+    position: relative;
+
     background: $color-black;
 
     @include breakpoint(0 $to-small-medium) {
@@ -63,6 +65,18 @@ $sizes: (
     background-position: 50% 50%;
 
     opacity: $image-opacity;
+  }
+
+  // Element: Video
+  // ---------------------------------------------------------------------------
+  &-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
   }
 
   // Element: Text Wrapper

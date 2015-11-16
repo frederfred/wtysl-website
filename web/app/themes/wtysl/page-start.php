@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
 <div class="MediaIntro">
-
   <div class="MediaIntro-imageWrapper">
     <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>);"></div>
+
+    <!-- <iframe src="https://player.vimeo.com/video/<?php echo get_post_meta(get_the_ID(), 'vimeo_id', true); ?>?badge=0&amp;byline=0&amp;portrait=0&amp;title=0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="MediaIntro-video"></iframe> -->
   </div>
 
   <div class="MediaIntro-textWrapper">
@@ -23,8 +24,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <iframe src="https://player.vimeo.com/video/<?php echo get_post_meta(get_the_ID(), 'vimeo_id', true); ?>?badge=0&amp;byline=0&amp;portrait=0&amp;title=0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="FlexEmbed-item"></iframe> -->
 </div>
 
 <?php get_footer(); ?>
