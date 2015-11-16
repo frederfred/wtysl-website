@@ -128,6 +128,10 @@ $sizes: (
 
       white-space: nowrap;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   // Element: List
