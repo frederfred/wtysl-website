@@ -1,8 +1,8 @@
 $space: (
-  s: $gutter-m / 2,
-  m: $gutter-m,
-  l: $gutter-m * 2,
-  xl: $gutter-m * 4
+  s: $base-line-height / 2,
+  m: $base-line-height,
+  l: $base-line-height * 2,
+  xl: $base-line-height * 4
 );
 
 $space-s: map-get($space, s);
