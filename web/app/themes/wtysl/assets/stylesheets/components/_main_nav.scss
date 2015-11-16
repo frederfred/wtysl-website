@@ -9,7 +9,6 @@ $logotype-width: 42px;
 $logotype-height: 44px;
 $item-margin: 15px;
 $shadow-width: 20px;
-$link-hover-opacity: 0.8;
 
 $sizes: (
   $small-medium: (
@@ -104,6 +103,10 @@ $sizes: (
 
         margin-left: (map-get($map, logotype-width) / 2) * -1;
       }
+    }
+
+    &:hover {
+      opacity: $link-hover-opacity;
     }
   }
 

@@ -182,5 +182,9 @@ $sizes: (
     @include breakpoint($medium) {
       font-size: $button-size-m;
     }
+
+    &:hover {
+      opacity: $link-hover-opacity;
+    }
   }
 }

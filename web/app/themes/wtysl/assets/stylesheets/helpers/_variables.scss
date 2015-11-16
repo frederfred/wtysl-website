@@ -14,13 +14,15 @@ $base-font-family: "Arial", sans-serif;
 $headline-font-family: "Fjalla One", sans-serif;
 $handwriting-font-family: "Permanent Marker", sans-serif;
 
-// Sizes
+// Sizes and values
 $base-font-size: 16px;
 $base-line-height: 22px;
 $site-max-width: 1400px;
 
 $gutter: 16px;
 $gutter-m: $base-line-height * 2;
+
+$link-hover-opacity: 0.8;
 
 
 // Grid
