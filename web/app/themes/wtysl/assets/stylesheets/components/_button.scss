@@ -5,24 +5,4 @@
 $component-name: "Button";
 $component-base: ".#{$component-name}";
 
-$border-width: 4px;
-$border-radius: 50px;
-$button-size-m: 20px;
-
-#{$component-base} {
-  background: $color-white;
-
-  border: 0;
-
-  padding: $base-line-height ($base-line-height * 2);
-
-
-  border: $border-width solid $color-yellow;
-  border-radius: $border-radius;
-
-  color: $color-black;
-
-  @include breakpoint($medium) {
-    font-size: $button-size-m;
-  }
-}
+#{$component-base} {}

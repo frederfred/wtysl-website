@@ -18,7 +18,9 @@ $handwriting-font-family: "Permanent Marker", sans-serif;
 $base-font-size: 16px;
 $base-line-height: 22px;
 $site-max-width: 1400px;
-$gutter: $base-line-height * 2;
+
+$gutter: 16px;
+$gutter-m: $base-line-height * 2;
 
 
 // Grid
@@ -27,6 +29,7 @@ $grid-columns: 12;
 
 // Breakpoints
 // -----------------------------------------------------------------------------
+$zero: 0;
 $x-small: 340px;
 $small: 450px;
 $small-medium: 600px;
@@ -35,6 +38,7 @@ $large: 910px;
 $x-large: 1200px;
 $to-x-small: $x-small - 1;
 $to-small: $small - 1;
+$to-small-medium: $small-medium - 1;
 $to-medium: $medium - 1;
 $to-large: $large - 1;
 $to-x-large: $x-large - 1;

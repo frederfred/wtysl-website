@@ -5,48 +5,70 @@
 $component-name: "MediaIntro";
 $component-base: ".#{$component-name}";
 
-$media-height: "100vh - #{$main-nav-height + $header-margin-bottom}";
-$image-opacity: 0.2;
+$button-padding: 27px 50px;
+$button-size-m: 20px;
+$image-opacity: 0.5;
+$brush-url: "../images/brushes/brush-1.svg";
+
+$sizes: (
+  $zero: (
+    height: $base-line-height * 8
+  ),
+  $small-medium: (
+    height: $base-line-height * 15
+  ),
+  $medium: (
+    height: $base-line-height * 22
+  ),
+  $large: (
+    height: $base-line-height * 26
+  )
+);
 
 #{$component-base} {
   position: relative;
 
-  height: calc(#{$media-height});
+  @each $breakpoint, $val in $sizes {
+    $map: map-get($sizes, $breakpoint);
 
-  // Element: Media Wrapper
-  // ---------------------------------------------------------------------------
-  &-mediaWrapper {
-    height: $media-height;
-  }
-
-  // Element: Inner
-  // ---------------------------------------------------------------------------
-  &-inner {
-    width: calc(((#{$media-height}) / 9) * 16);
-    height: 100%;
-    max-width: 100%;
-
-    margin: 0 auto;
-
-    border: 0;
+    @include breakpoint($breakpoint) {
+      height: map-get($map, height);
+    }
   }
 
   // Element: Image Wrapper
   // ---------------------------------------------------------------------------
   &-imageWrapper {
     background: $color-black;
+
+    @include breakpoint(0 $to-small-medium) {
+      margin-bottom: $base-line-height;
+    }
+
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        height: map-get($map, height);
+      }
+    }
   }
 
   // Element: Image
   // ---------------------------------------------------------------------------
   &-image {
+    height: 100%;
+
+    background-size: cover;
+    background-position: 50% 50%;
+
     opacity: $image-opacity;
   }
 
   // Element: Text Wrapper
   // ---------------------------------------------------------------------------
   &-textWrapper {
-    @include breakpoint($small) {
+    @include breakpoint($small-medium) {
       position: absolute;
 
       left: 0;
@@ -59,9 +81,9 @@ $image-opacity: 0.2;
   // Element: Text
   // ---------------------------------------------------------------------------
   &-text {
-    @extend %flex-embed-item;
+    height: 100%;
 
-    @include breakpoint($small) {
+    @include breakpoint($small-medium) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,12 +95,17 @@ $image-opacity: 0.2;
   &-textInner {
     text-align: center;
 
-    @include breakpoint(0 $to-large) {
+    @include breakpoint(0 $to-medium) {
       padding-left: $gutter;
       padding-right: $gutter;
     }
 
-    @include breakpoint($small) {
+    @include breakpoint($medium $to-large) {
+      padding-left: $gutter-m;
+      padding-right: $gutter-m;
+    }
+
+    @include breakpoint($small-medium) {
       color: $color-white;
     }
 
@@ -93,6 +120,8 @@ $image-opacity: 0.2;
     font-family: $handwriting-font-family;
     line-height: 0.8;
     font-size: 50px;
+
+    margin-bottom: $base-line-height;
 
     @include breakpoint($medium) {
       margin-bottom: $base-line-height;
@@ -112,12 +141,32 @@ $image-opacity: 0.2;
   &-body {
     margin-bottom: $base-line-height;
 
+    font-size: $base-font-size * 1.5;
+
     @include breakpoint($medium) {
-      font-size: 24px;
+      font-size: $base-font-size * 2;
     }
 
     @include breakpoint($x-large) {
       margin-bottom: $base-line-height * 2;
+    }
+  }
+
+  // Element: Button
+  // ---------------------------------------------------------------------------
+  &-button {
+    border: 0;
+
+    padding: $button-padding;
+
+    color: $color-white;
+
+    background: url($brush-url);
+    background-size: 100% 100%;
+    font-weight: bold;
+
+    @include breakpoint($medium) {
+      font-size: $button-size-m;
     }
   }
 }

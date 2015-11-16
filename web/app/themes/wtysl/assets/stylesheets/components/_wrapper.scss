@@ -14,10 +14,17 @@ $component-base: ".#{$component-name}";
   margin-left: auto;
   margin-right: auto;
 
+  overflow: hidden;
+
+  @include breakpoint($medium) {
+    padding-left: $gutter-m;
+    padding-right: $gutter-m;
+  }
+
   // Variant: Bleed
   // ---------------------------------------------------------------------------
   &--bleed {
-    @include breakpoint(0 ($site-max-width - ($gutter * 2))) {
+    @include breakpoint(0 ($site-max-width - ($gutter-m * 2))) {
       padding-left: 0;
       padding-right: 0;
     }
