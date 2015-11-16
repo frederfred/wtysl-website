@@ -228,7 +228,7 @@ $sizes: (
   // Element: Link
   // ---------------------------------------------------------------------------
   &-link {
-    font-family: $headline-font-family;
+    font-family: $fjalla-one-font-family;
     font-size: $base-font-size;
 
     @include breakpoint(0 $small-medium) {
