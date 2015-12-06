@@ -9,5 +9,6 @@
     </script>
   <?php endif; ?>
 
+  <script src="<?php bloginfo("template_url"); ?>/public/assets/javascripts/application.js"></script>
   </body>
 </html>
