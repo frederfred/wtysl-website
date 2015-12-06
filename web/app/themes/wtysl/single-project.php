@@ -29,10 +29,12 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
-<div class="Wrapper u-trailer-m">
-  <h2 class="Headline Headline--2">More projects</h2>
-</div>
+<div class="Block Block--darkBlueGrey theme-dark">
+  <div class="Wrapper u-trailer-m">
+    <h2 class="Headline Headline--2">More projects</h2>
+  </div>
 
-<?php get_template_part('templates/projects'); ?>
+  <?php get_template_part('templates/projects'); ?>
+</div>
 
 <?php get_footer(); ?>

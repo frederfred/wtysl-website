@@ -6,6 +6,7 @@
 @import "helpers/variables";
 @import "helpers/breakpoint";
 @import "helpers/intrinsic_ratio";
+@import "helpers/theme";
 
 
 // Config
@@ -48,6 +49,7 @@
 // Components
 // -----------------------------------------------------------------------------
 @import "components/accessibility_aid";
+@import "components/block";
 @import "components/body";
 @import "components/button";
 @import "components/flex_embed";

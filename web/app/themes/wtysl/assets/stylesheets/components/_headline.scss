@@ -9,6 +9,10 @@ $component-base: ".#{$component-name}";
   font-family: $handwriting-font-family;
   font-weight: normal;
 
+  @include theme-dark {
+    color: $color-white;
+  }
+
   // Variant: 1
   // ---------------------------------------------------------------------------
   &--1 {
