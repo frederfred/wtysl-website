@@ -10,7 +10,7 @@
   <div class="MediaIntro-textWrapper">
     <div class="MediaIntro-text">
       <div class="MediaIntro-textInner">
-        <h1 class="MediaIntro-headline">We tell <br>stories.</h1>
+        <h1 class="Headline Headline--1 MediaIntro-headline">We tell <br>stories.</h1>
 
         <div class="MediaIntro-body">
           <p>
