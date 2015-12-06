@@ -3,7 +3,7 @@
 add_action("init", "register_co_worker_post_type");
 
 function register_co_worker_post_type() {
-  register_post_type("co-workers",
+  register_post_type("co-worker",
     array(
       "labels" => array(
         "name" => __("Co-workers"),
