@@ -102,6 +102,30 @@ $component-base: ".#{$component-name}";
     }
   }
 
+  // Variant: 6 - 4 - 3 - 2
+  // ---------------------------------------------------------------------------
+  &--6-4-3-2 {
+    @include grid;
+
+    // Element: Item
+    // -------------------------------------------------------------------------
+    #{$component-base}-item {
+      @include grid-columns(6);
+
+      @include breakpoint($small $to-medium) {
+        @include grid-columns(4);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-columns(3);
+      }
+
+      @include breakpoint($large) {
+        @include grid-columns(2);
+      }
+    }
+  }
+
   // Variant: 12 - 9 & 3
   // ---------------------------------------------------------------------------
   &--12-9_3 {

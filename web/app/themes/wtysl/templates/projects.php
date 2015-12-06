@@ -22,7 +22,7 @@ $query = new WP_Query(
               </div>
             <?php endif; ?>
 
-            <h2 class="ProjectItem-title"><?php the_title(); ?></h2>
+            <h2 class="Headline Headline--3"><?php the_title(); ?></h2>
           </a>
         </li>
       <?php endwhile; ?>

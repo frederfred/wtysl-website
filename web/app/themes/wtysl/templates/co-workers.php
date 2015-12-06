@@ -10,7 +10,7 @@ $query = new WP_Query(
 ?>
 
 <?php if ($query->have_posts()): ?>
-  <ul class="Grid Grid--6-4-3 u-listPlain">
+  <ul class="Grid Grid--6-4-3-2 u-listPlain">
     <?php while ($query->have_posts()): ?>
       <?php $query->the_post(); ?>
       <?php
@@ -28,9 +28,11 @@ $query = new WP_Query(
           <?php endif; ?>
         </div>
 
-        <h3 class="u-trailer-s"><?php the_title(); ?></h3>
+        <div class="u-trailer-s">
+          <h3 class="Headline Headline--3"><?php the_title(); ?></h3>
+        </div>
 
-        <p>
+        <p class="Meta">
           <?php echo $title ?>
           <br>
           <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
