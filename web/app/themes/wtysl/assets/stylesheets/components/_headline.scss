@@ -1,0 +1,31 @@
+//
+// Component: Headline
+// =============================================================================
+
+$component-name: "Headline";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  font-family: $handwriting-font-family;
+  font-weight: normal;
+
+  // Variant: 1
+  // ---------------------------------------------------------------------------
+  &--1 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 0.8;
+
+    margin-bottom: $base-line-height;
+
+    @include breakpoint($small-medium) {
+      font-size: 50px;
+    }
+
+    @include breakpoint($medium) {
+      font-size: 80px;
+
+      margin-bottom: $base-line-height * 2;
+    }
+  }
+}

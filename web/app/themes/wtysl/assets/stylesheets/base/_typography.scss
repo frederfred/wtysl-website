@@ -40,39 +40,3 @@ ol {
     margin-bottom: 0;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $handwriting-font-family;
-  font-weight: normal;
-}
-
-h1 {
-  text-align: center;
-  font-size: 40px;
-  line-height: 0.8;
-
-  @include breakpoint($small-medium) {
-    font-size: 50px;
-  }
-
-  @include breakpoint($medium) {
-    font-size: 80px;
-  }
-}
-
-h1,
-h2,
-h3 {
-  margin-bottom: $base-line-height;
-}
-
-h4,
-h5,
-h6 {
-  margin-bottom: 0;
-}
