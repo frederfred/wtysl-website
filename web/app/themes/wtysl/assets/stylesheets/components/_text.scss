@@ -1,0 +1,18 @@
+//
+// Component: Text
+// =============================================================================
+
+$component-name: "Text";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  font-size: 18px;
+
+  @include breakpoint($small-medium) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($medium) {
+    font-size: 24px;
+  }
+}
