@@ -1,10 +1,12 @@
 $space: (
+  xs: $base-line-height / 4,
   s: $base-line-height / 2,
   m: $base-line-height,
   l: $base-line-height * 2,
   xl: $base-line-height * 4
 );
 
+$space-xs: map-get($space, xs);
 $space-s: map-get($space, s);
 $space-m: map-get($space, m);
 $space-l: map-get($space, l);

@@ -17,7 +17,9 @@ $query = new WP_Query(
         <li class="Grid-item">
           <a href="<?php the_permalink(); ?>" class="ProjectItem">
             <?php if ($image_src): ?>
-              <img src="<?php echo $image_src; ?>" alt="<?php the_title(); ?>" class="ProjectItem-media">
+              <div class="FlexEmbed FlexEmbed--6by4 u-trailer-xs ProjectItem-media">
+                <img src="<?php echo $image_src; ?>" alt="<?php the_title(); ?>" class="FlexEmbed-item">
+              </div>
             <?php endif; ?>
 
             <h2 class="ProjectItem-title"><?php the_title(); ?></h2>

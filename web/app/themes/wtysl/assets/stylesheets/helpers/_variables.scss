@@ -4,6 +4,7 @@ $color-black: #222;
 $color-blue: #00c;
 $color-brightness-20: #333;
 $color-brightness-50: #808080;
+$color-brightness-87: #ddd;
 $color-white: #fff;
 $color-yellow: #f9c453;
 $color-dark-blue-grey: #373b44;
@@ -20,7 +21,7 @@ $base-line-height: 24px;
 $site-max-width: 1400px;
 
 $gutter: 16px;
-$gutter-m: $base-line-height * 2;
+$gutter-m: $base-line-height / 4;
 
 $link-hover-opacity: 0.8;
 

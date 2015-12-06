@@ -10,9 +10,23 @@ $component-base: ".#{$component-name}";
 
   margin-bottom: $base-line-height * 2;
 
+  color: $color-black;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  // Element: Media
+  // ---------------------------------------------------------------------------
+  &-media {
+    background: $color-brightness-87;
+  }
+
   // Element: Title
   // ---------------------------------------------------------------------------
   &-title {
-    display: none;
+    font-family: $fjalla-one-font-family;
+    font-weight: normal;
+    font-size: 18px;
   }
 }
