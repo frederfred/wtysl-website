@@ -14,10 +14,13 @@ $query = new WP_Query(
     <ul class="Grid Grid--12-6-4 u-listPlain">
       <?php while ($query->have_posts()): ?>
         <?php $query->the_post(); ?>
+        <?php $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'small')[0]; ?>
 
         <li class="Grid-item">
           <a href="<?php the_permalink(); ?>" class="ProjectItem">
-            <img src="https://placeholdit.imgix.net/~text?w=660&amp;h=370" alt="<?php the_title(); ?>" class="ProjectItem-media">
+            <?php if ($image_src): ?>
+              <img src="<?php echo $image_src; ?>" alt="<?php the_title(); ?>" class="ProjectItem-media">
+            <?php endif; ?>
 
             <h2 class="ProjectItem-title"><?php the_title(); ?></h2>
           </a>
