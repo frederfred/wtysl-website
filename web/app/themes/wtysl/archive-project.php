@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 
-<?php get_template_part("templates/projects"); ?>
+<?php
+# Project grid
+$headline_level = 1;
+
+include(locate_template('templates/projects.php'));
+?>
 
 <?php get_footer(); ?>

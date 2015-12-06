@@ -8,7 +8,7 @@ $query = new WP_Query(
 ?>
 
 <div class="Wrapper">
-  <h1 class="u-visuallyhidden">Projects</h1>
+  <h<?php echo $headline_level ?> class="u-visuallyhidden">Projects</h<?php echo $headline_level ?>>
 
   <?php if ($query->have_posts()): ?>
     <ul class="Grid Grid--12-6-4 u-listPlain">
