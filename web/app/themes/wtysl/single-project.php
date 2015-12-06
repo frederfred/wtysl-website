@@ -29,11 +29,10 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
-<?php
-# Project grid
-$headline_level = 2;
+<div class="Wrapper u-trailer-m">
+  <h2 class="Headline Headline--2">More projects</h2>
+</div>
 
-include(locate_template('templates/projects.php'));
-?>
+<?php get_template_part('templates/projects'); ?>
 
 <?php get_footer(); ?>

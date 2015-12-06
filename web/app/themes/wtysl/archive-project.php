@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-<?php
-# Project grid
-$headline_level = 1;
+<div class="Wrapper">
+  <h1 class="Headline Headline--1 u-visuallyhidden">Projects</h1>
+</div>
 
-include(locate_template('templates/projects.php'));
-?>
+<?php get_template_part('templates/projects'); ?>
 
 <?php get_footer(); ?>
