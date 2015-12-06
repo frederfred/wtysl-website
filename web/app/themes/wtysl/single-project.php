@@ -7,7 +7,7 @@
       $video_id = get_post_meta(get_the_ID(), 'vimeo_id', true);
       ?>
 
-      <div class="Wrapper">
+      <div class="Wrapper u-trailer-xl">
         <article>
           <h1 class="Headline Headline--1"><?php the_title(); ?></h1>
 
@@ -22,5 +22,7 @@
       </div>
   <?php endwhile; ?>
 <?php endif; ?>
+
+<?php get_template_part("templates/projects"); ?>
 
 <?php get_footer(); ?>
