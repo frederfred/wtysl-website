@@ -28,4 +28,23 @@ $component-base: ".#{$component-name}";
       margin-bottom: $base-line-height * 2;
     }
   }
+
+  // Variant: 2
+  // ---------------------------------------------------------------------------
+  &--2 {
+    font-size: 28px;
+    line-height: 0.8;
+
+    margin-bottom: $base-line-height;
+
+    @include breakpoint($small-medium) {
+      font-size: 36px;
+    }
+
+    @include breakpoint($medium) {
+      font-size: 58px;
+
+      margin-bottom: $base-line-height * 2;
+    }
+  }
 }
