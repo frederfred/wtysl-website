@@ -17,7 +17,13 @@
             </div>
           <?php endif; ?>
 
-          <?php the_content(); ?>
+          <article class="Grid Grid--center-12-8">
+            <div class="Grid-item">
+              <div class="Text">
+                <?php the_content(); ?>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
   <?php endwhile; ?>
