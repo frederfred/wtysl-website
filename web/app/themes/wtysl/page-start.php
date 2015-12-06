@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="MediaIntro">
+<div class="MediaIntro u-trailer-xl">
   <div class="MediaIntro-imageWrapper">
     <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>);"></div>
 
@@ -24,6 +24,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="Wrapper">
+  <?php echo get_instagram_feed(); ?>
 </div>
 
 <?php get_footer(); ?>
