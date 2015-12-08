@@ -15,7 +15,8 @@ function register_project_post_type() {
       "supports" => array("title", "editor", "thumbnail"),
       "rewrite" => array(
         "slug" => "projects"
-      )
+      ),
+      "taxonomies" => array("category")
     )
   );
 }
