@@ -19,4 +19,8 @@ $component-base: ".#{$component-name}";
   @include breakpoint($small-medium) {
     margin-top: $base-line-height;
   }
+
+  @include breakpoint($medium) {
+    margin-bottom: $base-line-height * 2;
+  }
 }
