@@ -7,7 +7,7 @@ $query = new WP_Query(
 );
 ?>
 
-<div class="Wrapper">
+<div class="Wrapper Wrapper--tight">
   <?php if ($query->have_posts()): ?>
     <ul class="Grid Grid--12-6-4 u-listPlain">
       <?php while ($query->have_posts()): ?>
@@ -24,12 +24,11 @@ $query = new WP_Query(
             <?php endif; ?>
 
             <div class="ProjectItem-text">
-              <h2 class="Headline Headline--3"><?php the_title(); ?></h2>
-              <?php
-              foreach ($categories as $category) {
-                echo $category->name;
-              }
-              ?>
+              <h2 class="ProjectItem-title Headline Headline--3"><?php the_title(); ?></h2>
+
+              <p class="ProjectItem-category">
+                <?php echo empty($categories) ? '' : $categories[0]->name; ?>
+              </p>
             </div>
           </a>
         </li>

@@ -20,8 +20,4 @@ $component-base: ".#{$component-name}";
   object {
     @extend %flex-embed-item;
   }
-
-  img.#{$component-name}-item {
-    @extend %flex-embed-center-content;
-  }
 }

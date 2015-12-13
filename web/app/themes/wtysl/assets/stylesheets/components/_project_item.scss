@@ -5,6 +5,9 @@
 $component-name: "ProjectItem";
 $component-base: ".#{$component-name}";
 
+$transitoin-duration: 0.2s;
+$text-start-bottom: -20px;
+
 #{$component-base} {
   display: block;
 
@@ -12,20 +15,25 @@ $component-base: ".#{$component-name}";
 
   margin-bottom: $base-line-height / 4;
 
+  overflow: hidden;
+
   color: $color-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
 
-    #{$component-base}-media {
-      opacity: $link-hover-opacity;
+    #{$component-base}-text {
+      bottom: 0;
+
+      opacity: 1;
     }
   }
 
   // Element: Media
   // ---------------------------------------------------------------------------
   &-media {
-    background: $color-brightness-87;
+    background: $color-black;
   }
 
   // Element: Text
@@ -35,10 +43,20 @@ $component-base: ".#{$component-name}";
 
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: $text-start-bottom;
 
     padding: 20px;
 
+    opacity: 0;
+
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 8));
+
+    transition: opacity $transitoin-duration, bottom $transitoin-duration;
+  }
+
+  // Element: Title
+  // ---------------------------------------------------------------------------
+  &-title {
+    margin-bottom: 0;
   }
 }

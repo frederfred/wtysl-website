@@ -12,4 +12,11 @@ $component-base: ".#{$component-name}";
 
   margin-left: auto;
   margin-right: auto;
+
+  &--tight {
+    max-width: none;
+
+    padding-left: $gutter-m;
+    padding-right: $gutter-m;
+  }
 }

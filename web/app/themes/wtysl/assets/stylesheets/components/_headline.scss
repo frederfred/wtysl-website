@@ -59,5 +59,9 @@ $component-base: ".#{$component-name}";
     font-family: $fjalla-one-font-family;
     font-weight: normal;
     font-size: 20px;
+
+    @include breakpoint($medium) {
+      font-size: 28px;
+    }
   }
 }
