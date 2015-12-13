@@ -5,8 +5,7 @@
 $component-name: "MainNav";
 $component-base: ".#{$component-name}";
 
-$logotype-width: 42px;
-$logotype-height: 44px;
+$logotype-width: 46px;
 $item-margin: 15px;
 $shadow-width: 20px;
 
@@ -14,7 +13,7 @@ $sizes: (
   $small-medium: (
     height: $base-line-height * 3,
     link-size: 18px,
-    logotype-width: 64px,
+    logotype-width: 69px,
     logotype-height: $base-line-height * 3,
     item-margin: 20px,
     item-spacing-logo: 80px,
@@ -23,17 +22,15 @@ $sizes: (
   $medium: (
     height: $base-line-height * 4,
     link-size: 22px,
-    logotype-width: 85px,
-    logotype-height: $base-line-height * 4,
+    logotype-width: 92px,
     item-margin: 30px,
     item-spacing-logo: 100px,
     current-border-width: 3px
   ),
   $large: (
-    height: $base-line-height * 5,
+    height: $base-line-height * 6,
     link-size: 26px,
-    logotype-width: 106px,
-    logotype-height: $base-line-height * 5,
+    logotype-width: 139px,
     item-margin: 40px,
     item-spacing-logo: 120px,
     current-border-width: 4px
@@ -121,7 +118,7 @@ $sizes: (
       top: 0;
       bottom: 0;
 
-      padding-top: ($logotype-height / 2) - ($base-font-size * ($base-line-height / $base-font-size) / 2);
+      padding-top: $base-line-height / 2;
 
       overflow: auto;
       -webkit-overflow-scrolling: touch;
