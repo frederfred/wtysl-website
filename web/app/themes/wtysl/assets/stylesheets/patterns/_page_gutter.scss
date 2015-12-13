@@ -1,0 +1,9 @@
+%page-gutter {
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+
+  @include breakpoint($medium) {
+    padding-left: $page-gutter-m;
+    padding-right: $page-gutter-m;
+  }
+}

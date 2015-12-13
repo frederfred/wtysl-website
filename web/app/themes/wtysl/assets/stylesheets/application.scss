@@ -19,6 +19,7 @@
 @import "patterns/clearfix";
 @import "patterns/flex_embed";
 @import "patterns/grid";
+@import "patterns/page_gutter";
 @import "patterns/resets";
 @import "patterns/typography";
 
@@ -50,6 +51,7 @@
 // -----------------------------------------------------------------------------
 @import "components/accessibility_aid";
 @import "components/block";
+@import "components/featured_image";
 @import "components/flex_embed";
 @import "components/grid";
 @import "components/header";

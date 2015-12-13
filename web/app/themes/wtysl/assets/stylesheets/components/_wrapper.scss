@@ -6,18 +6,10 @@ $component-name: "Wrapper";
 $component-base: ".#{$component-name}";
 
 #{$component-base} {
-  max-width: $site-max-width;
+  @extend %page-gutter;
 
-  padding-left: $page-gutter;
-  padding-right: $page-gutter;
+  max-width: $site-max-width;
 
   margin-left: auto;
   margin-right: auto;
-
-  overflow: hidden;
-
-  @include breakpoint($medium) {
-    padding-left: $page-gutter-m;
-    padding-right: $page-gutter-m;
-  }
 }

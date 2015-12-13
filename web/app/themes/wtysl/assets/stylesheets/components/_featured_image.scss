@@ -1,0 +1,86 @@
+//
+// Component: Featured Image
+// =============================================================================
+
+$component-name: "FeaturedImage";
+$component-base: ".#{$component-name}";
+
+$sizes: (
+  $zero: (
+    height: $base-line-height * 4,
+    font-size: 40px
+  ),
+  $small-medium: (
+    height: $base-line-height * 8,
+    font-size: 80px
+  ),
+  $medium: (
+    height: $base-line-height * 12,
+    font-size: 120px
+  ),
+  $large: (
+    height: $base-line-height * 16,
+    font-size: 160px
+  )
+);
+
+#{$component-base} {
+  @extend %page-gutter;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: $base-line-height;
+
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @include breakpoint($medium) {
+    margin-bottom: $base-line-height * 2;
+  }
+
+  @each $breakpoint, $val in $sizes {
+    $map: map-get($sizes, $breakpoint);
+
+    @include breakpoint($breakpoint) {
+      height: map-get($map, height);
+    }
+  }
+
+  // Element: Headline
+  // ---------------------------------------------------------------------------
+  & &-headline { // Specificity hack
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        font-size: map-get($map, font-size);
+      }
+    }
+
+    // Variant: Color Black
+    // -------------------------------------------------------------------------
+    &--colorBlack {
+      color: $color-black;
+    }
+
+    // Variant: Color White
+    // -------------------------------------------------------------------------
+    &--colorWhite {
+      color: $color-white;
+    }
+
+    // Variant: Color Yellow
+    // -------------------------------------------------------------------------
+    &--colorYellow {
+      color: $color-yellow;
+    }
+
+    // Variant: Color Dark Blue-Grey
+    // -------------------------------------------------------------------------
+    &--colorDarkBlueGrey {
+      color: $color-dark-blue-grey;
+    }
+  }
+}

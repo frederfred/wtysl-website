@@ -7,4 +7,6 @@ $component-base: ".#{$component-name}";
 
 #{$component-base} {
   outline: 0; // Tabindex is defined for accessibilty reasons
+
+  overflow: hidden;
 }
