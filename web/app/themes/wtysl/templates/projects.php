@@ -1,8 +1,15 @@
 <?php
+$excludes = array();
+
+if (is_single()) {
+  array_push($excludes, get_the_ID());
+}
+
 $query = new WP_Query(
   array(
     'post_type' => 'project',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'post__not_in' => $excludes
   )
 );
 ?>
