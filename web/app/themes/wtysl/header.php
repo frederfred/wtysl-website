@@ -21,11 +21,11 @@
       <nav class="MainNav">
         <?php if (is_front_page()): ?>
           <div class="MainNav-logotype">
-            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt='"What Took You So Long?" logotype'>
           </div>
         <?php else: ?>
           <a href="<?php echo home_url(); ?>" class="MainNav-logotype MainNav-logotype--clickable">
-            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt='"What Took You So Long?" logotype'>
           </a>
         <?php endif; ?>
         <div class="MainNav-listWrapper">
