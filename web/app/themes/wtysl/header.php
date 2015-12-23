@@ -19,9 +19,15 @@
 
     <header class="Header" role="banner">
       <nav class="MainNav">
-        <a href="<?php echo home_url(); ?>" class="MainNav-logotype">
-          <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
-        </a>
+        <?php if (is_front_page()): ?>
+          <div class="MainNav-logotype">
+            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+          </div>
+        <?php else: ?>
+          <a href="<?php echo home_url(); ?>" class="MainNav-logotype MainNav-logotype--clickable">
+            <img src="<?php bloginfo("template_url"); ?>/public/assets/images/logotype.svg" alt="What Took You So Long?">
+          </a>
+        <?php endif; ?>
         <div class="MainNav-listWrapper">
           <ul class="MainNav-list">
             <?php
