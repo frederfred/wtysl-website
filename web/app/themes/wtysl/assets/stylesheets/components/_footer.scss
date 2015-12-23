@@ -1,0 +1,21 @@
+//
+// Component: Footer
+// =============================================================================
+
+$component-name: "Footer";
+$component-base: ".#{$component-name}";
+
+$logotype-width: 40px;
+
+#{$component-base} {
+  padding-bottom: $base-line-height;
+
+  // Element: Logotype
+  // ---------------------------------------------------------------------------
+  &-logotype {
+    width: $logotype-width;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
