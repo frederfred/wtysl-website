@@ -29,7 +29,7 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
-<div class="Block Block--darkBlueGrey theme-dark">
+<div class="Block">
   <div class="Wrapper u-trailer-m">
     <h2 class="Headline Headline--2">More projects</h2>
   </div>

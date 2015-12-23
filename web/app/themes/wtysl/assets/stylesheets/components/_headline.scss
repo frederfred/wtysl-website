@@ -8,10 +8,6 @@ $component-base: ".#{$component-name}";
 #{$component-base} {
   font-weight: normal;
 
-  @include theme-dark {
-    color: $color-white;
-  }
-
   // Variant: 1
   // ---------------------------------------------------------------------------
   &--1 {
