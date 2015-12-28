@@ -151,8 +151,6 @@ $sizes: (
   // Element: Body
   // ---------------------------------------------------------------------------
   &-body {
-    margin-bottom: $base-line-height;
-
     font-size: $base-font-size * 1.5;
 
     @include breakpoint($medium) {
@@ -161,28 +159,6 @@ $sizes: (
 
     @include breakpoint($x-large) {
       margin-bottom: $base-line-height * 2;
-    }
-  }
-
-  // Element: Button
-  // ---------------------------------------------------------------------------
-  &-button {
-    border: 0;
-
-    padding: $button-padding;
-
-    color: $color-white;
-
-    background: url($brush-url);
-    background-size: 100% 100%;
-    font-weight: bold;
-
-    @include breakpoint($medium) {
-      font-size: $button-size-m;
-    }
-
-    &:hover {
-      opacity: $link-hover-opacity;
     }
   }
 }

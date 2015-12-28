@@ -19,8 +19,6 @@
             We look for untold stories and unsung heroes. Care to join?
           </p>
         </div>
-
-        <button class="MediaIntro-button">Play our showreel</button>
       </div>
     </div>
   </div>
