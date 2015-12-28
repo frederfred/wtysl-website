@@ -33,9 +33,11 @@ $query = new WP_Query(
             <div class="ProjectItem-text">
               <h2 class="ProjectItem-title Headline Headline--3"><?php the_title(); ?></h2>
 
-              <p class="ProjectItem-category">
-                <?php echo empty($categories) ? '' : $categories[0]->name; ?>
-              </p>
+              <?php if (!empty($categories)): ?>
+                <p class="ProjectItem-category">
+                  <?php echo $categories[0]->name; ?>
+                </p>
+              <?php endif; ?>
             </div>
           </a>
         </li>
