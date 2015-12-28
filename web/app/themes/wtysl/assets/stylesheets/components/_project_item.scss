@@ -59,4 +59,10 @@ $text-start-bottom: -20px;
   &-title {
     margin-bottom: 0;
   }
+
+  // Element: Category
+  // ---------------------------------------------------------------------------
+  &-category {
+    font-family: $meta-font-family;
+  }
 }
