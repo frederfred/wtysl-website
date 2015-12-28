@@ -42,4 +42,23 @@ $sizes: (
       margin-right: -100px;
     }
   }
+
+  // Element: blockquote (non SUIT)
+  // ---------------------------------------------------------------------------
+  blockquote {
+    border-left: 4px solid $color-yellow;
+
+    padding-left: $base-line-height;
+    padding-top: $base-line-height / 2;
+    padding-bottom: $base-line-height / 2;
+
+    @include breakpoint($small) {
+      padding-right: $base-line-height;
+    }
+
+    @include breakpoint($medium) {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+  }
 }
