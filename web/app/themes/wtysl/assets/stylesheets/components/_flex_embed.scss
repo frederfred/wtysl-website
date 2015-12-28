@@ -13,6 +13,7 @@ $component-base: ".#{$component-name}";
   @include intrinsic-ratio-class(16, 9);
   @include intrinsic-ratio-class(3, 4);
   @include intrinsic-ratio-class(6, 4);
+  @include intrinsic-ratio-class(2, 3);
 
   &-item,
   iframe,

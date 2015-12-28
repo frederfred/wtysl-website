@@ -21,11 +21,9 @@ $query = new WP_Query(
 
       <li class="Grid-item u-trailer-l">
         <div class="u-trailer-s">
-          <?php if ($image_src): ?>
-            <img src="<?php echo $image_src; ?>" alt="<?php the_title(); ?>">
-          <?php else: ?>
-            <img src="https://placeholdit.imgix.net/~text?w=580&amp;h=870" alt="<?php the_title(); ?>">
-          <?php endif; ?>
+          <div class="FlexEmbed FlexEmbed--2by3">
+            <img src="<?php echo $image_src ? $image_src : 'https://placeholdit.imgix.net/~text?w=440&amp;h=660' ?>" alt="<?php the_title(); ?>" class="FlexEmbed-item">
+          </div>
         </div>
 
         <div class="u-trailer-s">
