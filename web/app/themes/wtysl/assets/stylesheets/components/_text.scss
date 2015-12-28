@@ -26,6 +26,8 @@ $sizes: (
     }
   }
 
+  // Element: Preamble
+  // ---------------------------------------------------------------------------
   &-preamble {
     @each $breakpoint, $val in $sizes {
       $map: map-get($sizes, $breakpoint);
