@@ -5,14 +5,39 @@
 $component-name: "Text";
 $component-base: ".#{$component-name}";
 
-#{$component-base} {
-  font-size: 18px;
+$sizes: (
+  $zero: (
+    font-size: 18px
+  ),
+  $small-medium: (
+    font-size: 20px
+  ),
+  $medium: (
+    font-size: 24px
+  )
+);
 
-  @include breakpoint($small-medium) {
-    font-size: 20px;
+#{$component-base} {
+  @each $breakpoint, $val in $sizes {
+    $map: map-get($sizes, $breakpoint);
+
+    @include breakpoint($breakpoint) {
+      font-size: map-get($map, font-size);
+    }
   }
 
-  @include breakpoint($medium) {
-    font-size: 24px;
+  &-preamble {
+    @each $breakpoint, $val in $sizes {
+      $map: map-get($sizes, $breakpoint);
+
+      @include breakpoint($breakpoint) {
+        font-size: map-get($map, font-size) * 1.4;
+      }
+    }
+
+    @include breakpoint($medium) {
+      margin-left: -100px;
+      margin-right: -100px;
+    }
   }
 }
