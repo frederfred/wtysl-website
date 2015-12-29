@@ -65,4 +65,12 @@ $sizes: (
       margin-right: 60px;
     }
   }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($color-blue, 20%);
+    }
+  }
 }
