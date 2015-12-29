@@ -6,7 +6,7 @@
       <div class="Wrapper u-trailer-xl">
         <article class="Grid Grid--center-12-8">
           <div class="Grid-item">
-            <h1 class="Headline Headline--1"><?php the_title(); ?></h1>
+            <h1 class="Headline Headline--1 u-visuallyhidden"><?php the_title(); ?></h1>
 
             <div class="Text">
               <?php the_content(); ?>
