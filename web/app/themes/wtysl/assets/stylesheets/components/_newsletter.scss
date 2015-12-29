@@ -1,0 +1,29 @@
+//
+// Component: Newsletter
+// =============================================================================
+
+$component-name: "Newsletter";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  padding: $base-line-height;
+
+  background: $color-yellow;
+
+  text-align: center;
+
+  // Element: Input
+  // ---------------------------------------------------------------------------
+  &-input {
+    @extend %form-input;
+
+    width: 100%;
+    max-width: 280px;
+  }
+
+  // Element: Submit
+  // ---------------------------------------------------------------------------
+  &-submit {
+    @extend %form-input;
+  }
+}

@@ -1,0 +1,15 @@
+%form-input {
+  display: inline-block;
+
+  padding: $base-line-height / 2;
+
+  border: 1px solid $color-black;
+
+  font-size: inherit;
+
+  background: $color-white;
+
+  &:focus {
+    border-color: $color-blue;
+  }
+}

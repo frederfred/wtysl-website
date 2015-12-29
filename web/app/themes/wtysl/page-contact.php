@@ -10,6 +10,7 @@
 
             <div class="Text">
               <?php the_content(); ?>
+              <?php get_template_part("templates/newsletter_form"); ?>
             </div>
           </div>
         </article>
