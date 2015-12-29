@@ -7,13 +7,16 @@ $component-base: ".#{$component-name}";
 
 $sizes: (
   $zero: (
-    font-size: 18px
+    font-size: 18px,
+    margin-bottom: $base-line-height
   ),
   $small-medium: (
-    font-size: 20px
+    font-size: 20px,
+    margin-bottom: $base-line-height * 1.5
   ),
   $medium: (
-    font-size: 24px
+    font-size: 24px,
+    margin-bottom: $base-line-height * 2
   )
 );
 
@@ -34,6 +37,7 @@ $sizes: (
 
       @include breakpoint($breakpoint) {
         font-size: map-get($map, font-size) * 1.4;
+        margin-bottom:  map-get($map, margin-bottom);
       }
     }
 
