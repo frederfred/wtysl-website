@@ -21,6 +21,9 @@ wordpress/wp-content/uploads
 wordpress/wp-content/themes/*
 !wordpress/wp-content/themes/wtysl
 
+# Theme
+wordpress/wp-content/themes/wtysl/public
+
 # Dotenv
 env.php
 
