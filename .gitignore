@@ -5,6 +5,7 @@ wordpress/wp-activate.php
 wordpress/wp-admin
 wordpress/wp-blog-header.php
 wordpress/wp-comments-post.php
+wordpress/wp-config-sample.php
 wordpress/wp-cron.php
 wordpress/wp-includes
 wordpress/wp-links-opml.php
