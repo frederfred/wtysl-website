@@ -1,37 +1,29 @@
-# Application
-web/app/plugins/*
-web/app/themes/wtysl/public
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*
-!web/app/mu-plugins/.gitkeep
-web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
-!web/app/mu-plugins/disallow-indexing.php
-!web/app/mu-plugins/register-theme-directory.php
-!web/app/mu-plugins/bedrock-autoloader.php
-
 # WordPress
-web/wp
-web/.htaccess
-
-# WP-CLI
-db-sync
-sql-dump-*.sql
+wordpress/license.txt
+wordpress/readme.html
+wordpress/wp-activate.php
+wordpress/wp-admin
+wordpress/wp-blog-header.php
+wordpress/wp-comments-post.php
+wordpress/wp-cron.php
+wordpress/wp-includes
+wordpress/wp-links-opml.php
+wordpress/wp-load.php
+wordpress/wp-login.php
+wordpress/wp-mail.php
+wordpress/wp-settings.php
+wordpress/wp-signup.php
+wordpress/wp-trackback.php
+wordpress/xmlrpc.php
+wordpress/wp-content/index.php
+wordpress/wp-content/plugins
+wordpress/wp-content/uploads
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/wtysl
 
 # Dotenv
-.env
-.env.*
-!.env.example
-
-# Vendor (e.g. Composer)
-vendor/*
-!vendor/.gitkeep
+env.php
 
 # Node Package Manager
 node_modules
 npm-debug.log
-
-# Vagrant
-bin
-.vagrant
