@@ -1,5 +1,5 @@
-var publicAssets = "./web/app/themes/wtysl/public/assets";
-var sourceFiles = "./web/app/themes/wtysl/assets";
+var publicAssets = "./wordpress/wp-content/themes/wtysl/public/assets";
+var sourceFiles = "./wordpress/wp-content/themes/wtysl/assets";
 
 module.exports = {
   publicAssets: publicAssets,
