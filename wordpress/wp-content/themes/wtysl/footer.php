@@ -15,6 +15,6 @@
     </script>
   <?php endif; ?>
 
-  <script src="<?php bloginfo("template_url"); ?>/public/assets/javascripts/application.js"></script>
+  <script src="<?php bloginfo("template_url"); ?>/public/assets/javascripts/application<?php echo minified_extension(); ?>.js?v=<?php echo get_asset_version(); ?>"></script>
   </body>
 </html>
