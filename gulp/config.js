@@ -52,6 +52,7 @@ module.exports = {
       src: [
         "./index.php",
         "./.htaccess",
+        "./auth.php",
         "./favicon.ico",
         "./wordpress"
       ],

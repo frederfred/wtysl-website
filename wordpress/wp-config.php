@@ -2,6 +2,10 @@
 /** Loads env variables */
 require( dirname( __FILE__ ) . '/../env.php' );
 
+if (ENV_AUTH) {
+  /** HTTP Auth */
+  require( dirname( __FILE__ ) . '/../auth.php' );
+}
 
 /**
  * The base configuration for WordPress
