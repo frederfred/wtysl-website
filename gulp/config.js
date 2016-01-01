@@ -51,7 +51,6 @@ module.exports = {
       ssh: true,
       src: [
         "./index.php",
-        "./.htaccess",
         "./auth.php",
         "./favicon.ico",
         "./wordpress"
