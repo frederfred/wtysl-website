@@ -5,7 +5,7 @@ var yargs = require("yargs").argv;
 var config = require("../config").deploy;
 var allowedTargets = ["staging", "production"];
 
-gulp.task("deploy", function() {
+gulp.task("deploy", ["uglify", "cssnano"], function() {
   var target = yargs.env;
   var settings;
   var rsyncConfig;
