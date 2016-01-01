@@ -22,6 +22,9 @@ wordpress/wp-content/uploads
 wordpress/wp-content/themes/*
 !wordpress/wp-content/themes/wtysl
 
+# Deploy settings
+deploy-settings.json
+
 # Theme
 wordpress/wp-content/themes/wtysl/public
 
