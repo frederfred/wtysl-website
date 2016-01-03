@@ -1,0 +1,7 @@
+{
+  "staging": {
+    "user": "abc",
+    "host": "abc.example.com",
+    "destination": "example.com/public_html"
+  }
+}
