@@ -36,6 +36,16 @@ $sizes: (
     }
   }
 
+  @include breakpoint($zero $to-small-medium) {
+    height: auto;
+
+    margin-bottom: $base-line-height;
+  }
+
+  @include breakpoint($small-medium) {
+    margin-bottom: $base-line-height * 4;
+  }
+
   // Element: Image Wrapper
   // ---------------------------------------------------------------------------
   &-imageWrapper {
@@ -64,7 +74,9 @@ $sizes: (
     background-size: cover;
     background-position: 50% 50%;
 
-    opacity: $image-opacity;
+    @include breakpoint($small-medium) {
+      opacity: $image-opacity;
+    }
   }
 
   // Element: Video
