@@ -68,7 +68,7 @@ $sizes: (
 
       pointer-events: none;
 
-      background: linear-gradient(to right, rgba($color-dark-blue-grey, 0), rgba($color-dark-blue-grey, 1));
+      background: linear-gradient(to right, rgba($color-white, 0), rgba($color-white, 1));
     }
   }
 
@@ -233,14 +233,7 @@ $sizes: (
   &-link {
     font-family: $fjalla-one-font-family;
     font-size: $base-font-size;
-
-    @include breakpoint(0 $small-medium) {
-      color: $color-white;
-    }
-
-    @include breakpoint($small-medium) {
-      color: $color-dark-blue-grey;
-    }
+    color: $color-dark-blue-grey;
 
     @each $breakpoint, $val in $sizes {
       $map: map-get($sizes, $breakpoint);
