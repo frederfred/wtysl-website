@@ -10,7 +10,7 @@ $query = new WP_Query(
 ?>
 
 <?php if ($query->have_posts()): ?>
-  <ul class="Grid Grid--6-4-3-2 u-listPlain">
+  <ul class="Grid Grid--6-4-3 u-listPlain">
     <?php while ($query->have_posts()): ?>
       <?php $query->the_post(); ?>
       <?php
@@ -21,8 +21,8 @@ $query = new WP_Query(
 
       <li class="Grid-item u-trailer-l">
         <div class="u-trailer-s">
-          <div class="FlexEmbed FlexEmbed--2by3">
-            <img src="<?php echo $image_src ? $image_src : 'https://placeholdit.imgix.net/~text?w=440&amp;h=660' ?>" alt="<?php the_title(); ?>" class="FlexEmbed-item">
+          <div class="FlexEmbed FlexEmbed--3by2">
+            <img src="<?php echo $image_src ? $image_src : 'https://placeholdit.imgix.net/~text?w=660&amp;h=440' ?>" alt="<?php the_title(); ?>" class="FlexEmbed-item">
           </div>
         </div>
 

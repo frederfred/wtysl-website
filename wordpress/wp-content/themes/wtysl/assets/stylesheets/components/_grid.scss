@@ -46,9 +46,9 @@ $component-base: ".#{$component-name}";
     }
   }
 
-  // Variant: 6 - 4 - 3 - 2
+  // Variant: 6 - 4 - 3
   // ---------------------------------------------------------------------------
-  &--6-4-3-2 {
+  &--6-4-3 {
     @include grid;
 
     // Element: Item
@@ -62,10 +62,6 @@ $component-base: ".#{$component-name}";
 
       @include breakpoint($medium) {
         @include grid-columns(3);
-      }
-
-      @include breakpoint($large) {
-        @include grid-columns(2);
       }
     }
   }

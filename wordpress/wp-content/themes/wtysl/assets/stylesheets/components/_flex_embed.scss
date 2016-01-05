@@ -14,6 +14,7 @@ $component-base: ".#{$component-name}";
   @include intrinsic-ratio-class(3, 4);
   @include intrinsic-ratio-class(6, 4);
   @include intrinsic-ratio-class(2, 3);
+  @include intrinsic-ratio-class(3, 2);
 
   &-item,
   iframe,
