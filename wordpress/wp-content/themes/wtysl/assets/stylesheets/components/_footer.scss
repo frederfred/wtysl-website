@@ -8,7 +8,35 @@ $component-base: ".#{$component-name}";
 $logotype-width: 40px;
 
 #{$component-base} {
+  position: relative;
+
   padding-bottom: $base-line-height;
+
+  // Element: Text
+  // ---------------------------------------------------------------------------
+  &-text {
+    position: absolute;
+
+    top: 12px;
+
+    font-size: 12px;
+
+    // Variant: Before
+    // -------------------------------------------------------------------------
+    &--before {
+      right: 50%;
+
+      margin-right: $logotype-width;
+    }
+
+    // Variant: After
+    // -------------------------------------------------------------------------
+    &--after {
+      left: 50%;
+
+      margin-left: $logotype-width;
+    }
+  }
 
   // Element: Logotype
   // ---------------------------------------------------------------------------

@@ -20,6 +20,7 @@ require "includes/helpers/view_helpers.php";
 require "includes/admin/remove_menu_items.php";
 require "includes/admin/advanced_custom_fields.php";
 require "includes/admin/custom-tinymce-styles.php";
+require "includes/admin/custom-settings.php";
 
 # Required plugin
 require "acf-repeater/acf-repeater.php";
