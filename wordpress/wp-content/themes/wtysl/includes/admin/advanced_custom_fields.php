@@ -123,4 +123,44 @@ if(function_exists("register_field_group"))
     ),
     'menu_order' => 0,
   ));
+
+  register_field_group(array (
+    'id' => 'acf_page-meta',
+    'title' => 'Page meta',
+    'fields' => array (
+      array (
+        'key' => 'field_566dcd2908ddc',
+        'label' => 'Headline color',
+        'name' => 'headline_color',
+        'type' => 'select',
+        'choices' => array (
+          'color-black' => 'Black',
+          'color-white' => 'White',
+          'color-yellow' => 'Yellow',
+          'color-dark-blue-grey' => 'Dark blue-grey',
+        ),
+        'default_value' => 'color-yellow',
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'page',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
 }
