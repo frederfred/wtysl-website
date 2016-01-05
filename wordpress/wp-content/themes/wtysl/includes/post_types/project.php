@@ -16,7 +16,7 @@ function register_project_post_type() {
       "rewrite" => array(
         "slug" => "projects"
       ),
-      "taxonomies" => array("category")
+      "taxonomies" => array("category", "post_tag")
     )
   );
 }

@@ -4,7 +4,8 @@
 $featured_projects = new WP_Query(
   array(
     'post_type' => 'project',
-    'posts_per_page' => 2
+    'posts_per_page' => 3,
+    'tag' => 'startpage'
   )
 );
 ?>
@@ -37,7 +38,7 @@ $featured_projects = new WP_Query(
   <?php if ($featured_projects->have_posts()): ?>
     <h2 class="Headline Headline--2 u-textCenter">Selected projects</h2>
 
-    <ul class="Grid Grid--12-6 u-listPlain u-trailer-xl">
+    <ul class="Grid Grid--12-4 u-listPlain u-trailer-xl">
       <?php while ($featured_projects->have_posts()): ?>
         <?php $featured_projects->the_post(); ?>
         <?php $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'small')[0]; ?>
