@@ -19,7 +19,7 @@
 <?php endif; ?>
 
 <div class="Wrapper u-trailer-xl">
-  <h2 class="Headline Headline--2">Our people</h2>
+  <h2 class="Headline Headline--2">Our team</h2>
 
   <?php get_template_part('templates/co-workers'); ?>
 </div>
