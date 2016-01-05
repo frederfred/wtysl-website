@@ -14,7 +14,7 @@ function register_co_worker_post_type() {
       "has_archive" => false,
       "show_ui" => true,
 
-      "supports" => array("title", "editor")
+      "supports" => array("title", "thumbnail"),
     )
   );
 }
