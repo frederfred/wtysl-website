@@ -21,6 +21,9 @@ require "includes/admin/remove_menu_items.php";
 require "includes/admin/advanced_custom_fields.php";
 require "includes/admin/custom-tinymce-styles.php";
 
+# Required plugin
+require "acf-repeater/acf-repeater.php";
+
 # Featured images
 add_theme_support("post-thumbnails");
 
