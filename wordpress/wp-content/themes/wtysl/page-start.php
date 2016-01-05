@@ -71,7 +71,13 @@ $featured_projects = new WP_Query(
 
   <h2 class="Headline Headline--2 u-textCenter">Follow our journey on <a href="https://instagram.com/wtysl/" target="_blank">Instagram</a></h2>
 
-  <?php echo get_instagram_feed(); ?>
+  <div class="u-trailer-xl">
+    <?php echo get_instagram_feed(); ?>
+  </div>
+
+  <h2 class="Headline Headline--2 u-textCenter">And subscribe to our newsletter</h2>
+
+  <?php get_template_part("templates/newsletter_form"); ?>
 </div>
 
 <?php get_footer(); ?>
