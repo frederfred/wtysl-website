@@ -68,6 +68,8 @@ $featured_projects = new WP_Query(
 
   <?php wp_reset_postdata(); ?>
 
+  <h2 class="Headline Headline--2 u-textCenter">Follow our journey on <a href="https://instagram.com/wtysl/" target="_blank">Instagram</a></h2>
+
   <?php echo get_instagram_feed(); ?>
 </div>
 
