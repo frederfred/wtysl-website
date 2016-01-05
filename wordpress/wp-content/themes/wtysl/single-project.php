@@ -30,8 +30,8 @@
 <?php endif; ?>
 
 <div class="Block">
-  <div class="Wrapper u-trailer-m">
-    <h2 class="Headline Headline--2">More projects</h2>
+  <div class="Wrapper u-trailer-l">
+    <h2 class="Headline Headline--2 Headline--bordered u-textCenter">More projects</h2>
   </div>
 
   <?php get_template_part('templates/projects'); ?>

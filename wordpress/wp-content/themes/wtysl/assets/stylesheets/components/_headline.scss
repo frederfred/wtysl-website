@@ -60,4 +60,11 @@ $component-base: ".#{$component-name}";
       font-size: 28px;
     }
   }
+
+  // Variant: Bordered
+  // ---------------------------------------------------------------------------
+  &--bordered {
+    padding-top: $base-line-height * 2;
+    border-top: 1px solid $color-brightness-87;
+  }
 }
