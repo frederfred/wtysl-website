@@ -2,31 +2,58 @@
   margin-bottom: $gutter;
 }
 
+%content-align-left {
+  @extend %content-align;
+
+  float: left;
+
+  margin-right: $gutter;
+}
+
+%content-align-right {
+  @extend %content-align;
+
+  float: right;
+
+  margin-left: $gutter;
+
+  text-align: right;
+}
+
+%content-align-center {
+  @extend %content-align;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
 .u-contentAlign {
   &Left {
-    @extend %content-align;
-
-    float: left;
-
-    margin-right: $gutter;
+    @extend %content-align-left;
   }
 
   &Right {
-    @extend %content-align;
-
-    float: right;
-
-    margin-left: $gutter;
-
-    text-align: right;
+    @extend %content-align-right;
   }
 
   &Center {
-    @extend %content-align;
+    @extend %content-align-center;
+  }
+}
 
-    margin-left: auto;
-    margin-right: auto;
+// WordPress align classes
+.align {
+  &left {
+    @extend %content-align-left;
+  }
 
-    text-align: center;
+  &right {
+    @extend %content-align-right;
+  }
+
+  &center {
+    @extend %content-align-center;
   }
 }
