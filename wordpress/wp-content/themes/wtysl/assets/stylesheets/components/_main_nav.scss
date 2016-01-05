@@ -188,11 +188,7 @@ $sizes: (
     // State: Is Current
     // -------------------------------------------------------------------------
     &.is-current {
-      border-bottom: 2px solid $color-white;
-
-      @include breakpoint($small-medium) {
-        border-bottom-color: $color-dark-blue-grey;
-      }
+      border-bottom: 2px solid $color-dark-blue-grey;
 
       @each $breakpoint, $val in $sizes {
         $map: map-get($sizes, $breakpoint);
