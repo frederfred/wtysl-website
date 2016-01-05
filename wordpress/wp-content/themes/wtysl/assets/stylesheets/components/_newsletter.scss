@@ -6,7 +6,12 @@ $component-name: "Newsletter";
 $component-base: ".#{$component-name}";
 
 #{$component-base} {
+  max-width: 560px;
+
   padding: $base-line-height;
+
+  margin-left: auto;
+  margin-right: auto;
 
   background: $color-yellow;
 
