@@ -163,4 +163,51 @@ if(function_exists("register_field_group"))
     ),
     'menu_order' => 0,
   ));
+
+  register_field_group(array (
+    'id' => 'acf_image-grid',
+    'title' => 'Image grid',
+    'fields' => array (
+      array (
+        'key' => 'field_568be7af2f6db',
+        'label' => 'Images',
+        'name' => 'images',
+        'type' => 'repeater',
+        'sub_fields' => array (
+          array (
+            'key' => 'field_568be7db2f6dc',
+            'label' => 'Image',
+            'name' => 'image',
+            'type' => 'image',
+            'column_width' => '',
+            'save_format' => 'object',
+            'preview_size' => 'thumbnail',
+            'library' => 'all',
+          ),
+        ),
+        'row_min' => '',
+        'row_limit' => '',
+        'layout' => 'table',
+        'button_label' => 'Add image',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'project',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
 }

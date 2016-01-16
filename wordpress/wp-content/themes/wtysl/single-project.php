@@ -19,11 +19,24 @@
             <div class="Grid-item">
               <h1 class="Headline Headline--1"><?php the_title(); ?></h1>
 
-              <div class="Text">
+              <div class="Text u-trailer-l">
                 <?php the_content(); ?>
               </div>
             </div>
           </div>
+
+          <?php if (have_rows('images')): ?>
+            <div class="Grid Grid--12-6">
+              <?php while (have_rows('images')): ?>
+                <?php the_row(); ?>
+                <?php $image = get_sub_field('image'); ?>
+
+                <div class="Grid-item u-trailer-l">
+                  <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>">
+                </div>
+              <?php endwhile; ?>
+            </div>
+          <?php endif; ?>
         </article>
       </div>
   <?php endwhile; ?>
