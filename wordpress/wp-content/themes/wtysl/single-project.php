@@ -26,14 +26,28 @@
           </div>
 
           <?php if (have_rows('images')): ?>
+            <?php if (has_odd_number_of_images()): ?>
+              <?php $image = get_field('images')[0]['image']; ?>
+
+              <div class="Grid Grid--12">
+                <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="Grid-item u-trailer-xs">
+              </div>
+            <?php endif; ?>
+
             <div class="Grid Grid--12-6">
+              <?php $i = 0; ?>
+
               <?php while (have_rows('images')): ?>
                 <?php the_row(); ?>
                 <?php $image = get_sub_field('image'); ?>
 
-                <div class="Grid-item u-trailer-l">
-                  <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>">
-                </div>
+                <?php if (has_odd_number_of_images() && $i != 0): ?>
+                  <div class="Grid-item u-trailer-xs">
+                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>">
+                  </div>
+                <?php endif; ?>
+
+                <?php $i++; ?>
               <?php endwhile; ?>
             </div>
           <?php endif; ?>

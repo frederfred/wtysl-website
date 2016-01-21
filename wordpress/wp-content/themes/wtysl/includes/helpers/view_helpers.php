@@ -84,3 +84,7 @@ function dashesToCamelCase($str) {
 
   return $camel_cased_str;
 }
+
+function has_odd_number_of_images() {
+  return count(get_field('images')) % 2 != 0;
+}
