@@ -10,27 +10,29 @@ $featured_projects = new WP_Query(
 );
 ?>
 
-<div class="MediaIntro">
-  <div class="MediaIntro-imageWrapper">
-    <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>);"></div>
-  </div>
+<?php if (have_posts()): ?>
+  <?php while (have_posts()): ?>
+    <?php the_post(); ?>
 
-  <div class="MediaIntro-textWrapper">
-    <div class="MediaIntro-text">
-      <div class="MediaIntro-textInner">
-        <h1 class="Headline Headline--1 MediaIntro-headline">We tell <br>stories.</h1>
+    <div class="MediaIntro">
+      <div class="MediaIntro-imageWrapper">
+        <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>);"></div>
+      </div>
 
-        <div class="MediaIntro-body">
-          <p>
-            Guerrilla filmmaking takes us to the most remote areas of the world.
-            <br>
-            We look for untold stories and unsung heroes. Care to join?
-          </p>
+      <div class="MediaIntro-textWrapper">
+        <div class="MediaIntro-text">
+          <div class="MediaIntro-textInner">
+            <h1 class="Headline Headline--1 MediaIntro-headline"><?php the_field('headline'); ?></h1>
+
+            <div class="MediaIntro-body">
+              <?php the_content(); ?>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  <?php endwhile; ?>
+<?php endif; ?>
 
 <div class="Wrapper">
   <?php if ($featured_projects->have_posts()): ?>

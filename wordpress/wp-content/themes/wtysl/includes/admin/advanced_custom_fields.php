@@ -7,6 +7,15 @@ if(function_exists("register_field_group"))
     'title' => 'Startpage meta',
     'fields' => array (
       array (
+        'key' => 'field_56a69ace44446',
+        'label' => 'Headline',
+        'name' => 'headline',
+        'type' => 'wysiwyg',
+        'default_value' => '',
+        'toolbar' => 'basic',
+        'media_upload' => 'no',
+      ),
+      array (
         'key' => 'field_56313808216f8',
         'label' => 'Vimeo id',
         'name' => 'vimeo_id',
