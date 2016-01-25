@@ -13,11 +13,7 @@ $query = new WP_Query(
   <ul class="Grid Grid--6-4-3 u-listPlain">
     <?php while ($query->have_posts()): ?>
       <?php $query->the_post(); ?>
-      <?php
-      $title = get_post_meta(get_the_ID(), 'title', true);
-      $email = get_post_meta(get_the_ID(), 'e-mail', true);
-      $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'small')[0];
-      ?>
+      <?php $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'small')[0]; ?>
 
       <li class="Grid-item u-trailer-l">
         <div class="u-trailer-s">
@@ -31,9 +27,9 @@ $query = new WP_Query(
         </div>
 
         <p class="Meta">
-          <?php echo $title ?>
+          <?php the_field('title'); ?>
           <br>
-          <a href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
+          <a href="mailto:<?php the_field('e-mail'); ?>"><?php the_field('e-mail'); ?></a>
         </p>
       </li>
     <?php endwhile; ?>

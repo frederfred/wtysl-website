@@ -3,15 +3,12 @@
 <?php if (have_posts()): ?>
   <?php while (have_posts()): ?>
     <?php the_post(); ?>
-      <?php
-      $video_id = get_post_meta(get_the_ID(), 'vimeo_id', true);
-      ?>
 
       <div class="Wrapper u-trailer-xl">
         <article>
-          <?php if ($video_id): ?>
+          <?php if (get_field('vimeo_id')): ?>
             <div class="FlexEmbed FlexEmbed--16by9 u-trailer-xl">
-              <iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?badge=0&amp;byline=0&amp;portrait=0&amp;title=0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="FlexEmbed-item"></iframe>
+              <iframe src="https://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?badge=0&amp;byline=0&amp;portrait=0&amp;title=0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="FlexEmbed-item"></iframe>
             </div>
           <?php endif; ?>
 
