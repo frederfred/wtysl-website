@@ -5,10 +5,7 @@
 $component-name: "MediaIntro";
 $component-base: ".#{$component-name}";
 
-$button-padding: 27px 50px;
-$button-size-m: 20px;
 $image-opacity: 0.5;
-$brush-url: "../images/brushes/brush-1.svg";
 
 $sizes: (
   $zero: (
@@ -77,18 +74,6 @@ $sizes: (
     @include breakpoint($small-medium) {
       opacity: $image-opacity;
     }
-  }
-
-  // Element: Video
-  // ---------------------------------------------------------------------------
-  &-video {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
   }
 
   // Element: Text Wrapper
