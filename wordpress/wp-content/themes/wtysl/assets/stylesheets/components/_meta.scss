@@ -9,5 +9,6 @@ $component-base: ".#{$component-name}";
   overflow: hidden;
 
   text-overflow: ellipsis;
+  font-family: $meta-font-family;
   font-size: 16px;
 }
