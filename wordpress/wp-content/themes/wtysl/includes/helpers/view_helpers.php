@@ -78,7 +78,7 @@ function get_archive_posts($post_type, $per_page = 5, $order = "DESC") {
  * @param string $str
  * @return string
  */
-function dashesToCamelCase($str) {
+function dashes_to_camel_case($str) {
   $camel_cased_str = str_replace(' ', '', ucwords(str_replace('-', ' ', $str)));
   $camel_cased_str[0] = strtolower($camel_cased_str[0]);
 

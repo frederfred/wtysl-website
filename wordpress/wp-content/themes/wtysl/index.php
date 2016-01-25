@@ -4,7 +4,7 @@
   <?php while (have_posts()): ?>
     <?php the_post(); ?>
       <?php $featured_image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>
-      <?php $headline_color = dashesToCamelCase(get_post_meta(get_the_ID(), 'headline_color', true)); ?>
+      <?php $headline_color = dashes_to_camel_case(get_post_meta(get_the_ID(), 'headline_color', true)); ?>
 
       <?php if ($featured_image_src): ?>
         <div class="FeaturedImage" style="background-image: url(<?php echo $featured_image_src; ?>);">
