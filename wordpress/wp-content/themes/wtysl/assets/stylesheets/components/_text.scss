@@ -32,6 +32,8 @@ $sizes: (
   // Element: Preamble
   // ---------------------------------------------------------------------------
   &-preamble {
+    @extend %offset;
+
     @each $breakpoint, $val in $sizes {
       $map: map-get($sizes, $breakpoint);
 
@@ -40,11 +42,12 @@ $sizes: (
         margin-bottom:  map-get($map, margin-bottom);
       }
     }
+  }
 
-    @include breakpoint($medium) {
-      margin-left: -100px;
-      margin-right: -100px;
-    }
+  // Image
+  // ---------------------------------------------------------------------------
+  &-image {
+    @extend %offset;
   }
 
   // Element: blockquote (non SUIT)

@@ -9,6 +9,9 @@ require "includes/libs/instagram/instagram_feed.php";
 # Walkers
 require "includes/walkers/main_nav.php";
 
+# Filters
+require "includes/filters/content.php";
+
 # Custom post types
 require "includes/post_types/co_worker.php";
 require "includes/post_types/project.php";
@@ -32,9 +35,6 @@ add_theme_support("post-thumbnails");
 add_image_size("small", 700, 9999);
 add_image_size("medium", 1400, 9999);
 add_image_size("large", 2800, 9999);
-
-# Image compression
-add_filter("jpeg_quality", create_function("", "return 50;"));
 
 # Remove unwanted WordPress clutter
 remove_action("wp_head", "wp_generator");
