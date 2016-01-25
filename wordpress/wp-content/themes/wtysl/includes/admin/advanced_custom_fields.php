@@ -15,18 +15,6 @@ if(function_exists("register_field_group"))
         'toolbar' => 'basic',
         'media_upload' => 'no',
       ),
-      array (
-        'key' => 'field_56313808216f8',
-        'label' => 'Vimeo id',
-        'name' => 'vimeo_id',
-        'type' => 'number',
-        'default_value' => '',
-        'placeholder' => '',
-        'prepend' => '',
-        'append' => '',
-        'formatting' => 'none',
-        'maxlength' => '',
-      ),
     ),
     'location' => array (
       array (
