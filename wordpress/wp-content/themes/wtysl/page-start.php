@@ -36,7 +36,7 @@ $featured_projects = new WP_Query(
 
 <div class="Wrapper">
   <?php if ($featured_projects->have_posts()): ?>
-    <h2 class="Headline Headline--2 u-textCenter">Selected projects</h2>
+    <h2 class="Headline Headline--2 u-textCenter">Projects</h2>
 
     <ul class="Grid Grid--12-4 u-listPlain u-trailer-xl">
       <?php while ($featured_projects->have_posts()): ?>
