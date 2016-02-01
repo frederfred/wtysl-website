@@ -61,10 +61,36 @@ $component-base: ".#{$component-name}";
     }
   }
 
-  // Variant: Bordered
+  // Variant: Dotted
   // ---------------------------------------------------------------------------
-  &--bordered {
+  &--dotted {
+    position: relative;
+
     padding-top: $base-line-height * 2;
-    border-top: 1px solid $color-brightness-87;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 50%;
+
+      width: 10px;
+      height: 10px;
+
+      border-radius: 5px;
+
+      background: $color-yellow;
+    }
+
+    &::before {
+      margin-left: -15px;
+    }
+
+    &::before {
+      margin-after: 15px;
+    }
   }
 }

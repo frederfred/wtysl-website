@@ -55,7 +55,7 @@
 
 <div class="Block">
   <div class="Wrapper u-trailer-l">
-    <h2 class="Headline Headline--2 Headline--bordered u-textCenter">More projects</h2>
+    <h2 class="Headline Headline--2 Headline--dotted u-textCenter">More projects</h2>
   </div>
 
   <?php get_template_part('templates/projects'); ?>
