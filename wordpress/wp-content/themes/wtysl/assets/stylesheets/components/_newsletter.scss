@@ -17,18 +17,36 @@ $component-base: ".#{$component-name}";
 
   text-align: center;
 
+  // Element: Label
+  // ---------------------------------------------------------------------------
+  &-label {
+    margin-right: 10px;
+  }
+
   // Element: Input
   // ---------------------------------------------------------------------------
   &-input {
     @extend %form-input;
 
     width: 100%;
-    max-width: 280px;
+
+    margin-bottom: $space-s;
+
+    @include breakpoint($small-medium) {
+      max-width: 280px;
+
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
   }
 
   // Element: Submit
   // ---------------------------------------------------------------------------
   &-submit {
     @extend %form-input;
+
+    &:hover {
+      background: $color-yellow-light;
+    }
   }
 }
