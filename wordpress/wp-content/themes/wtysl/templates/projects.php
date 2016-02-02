@@ -7,6 +7,8 @@ if (is_single()) {
 
 $query = new WP_Query(
   array(
+    'order' => 'ASC',
+    'orderby' => 'menu_order',
     'post_type' => 'project',
     'posts_per_page' => -1,
     'post__not_in' => $excludes

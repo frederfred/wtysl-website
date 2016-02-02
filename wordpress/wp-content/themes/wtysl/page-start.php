@@ -3,6 +3,8 @@
 <?php
 $featured_projects = new WP_Query(
   array(
+    'order' => 'ASC',
+    'orderby' => 'menu_order',
     'post_type' => 'project',
     'posts_per_page' => 3,
     'tag' => 'startpage'
