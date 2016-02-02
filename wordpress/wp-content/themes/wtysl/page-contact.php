@@ -12,7 +12,7 @@
               <?php the_content(); ?>
             </div>
 
-            <?php get_template_part("templates/newsletter_form"); ?>
+            <?php get_template_part('templates/newsletter_form'); ?>
           </div>
         </article>
       </div>

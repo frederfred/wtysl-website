@@ -77,7 +77,7 @@ $featured_projects = new WP_Query(
 
   <h2 class="Headline Headline--2 u-textCenter">Subscribe to our newsletter</h2>
 
-  <?php get_template_part("templates/newsletter_form"); ?>
+  <?php get_template_part('templates/newsletter_form'); ?>
 </div>
 
 <?php get_footer(); ?>

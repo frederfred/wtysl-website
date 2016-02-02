@@ -5,7 +5,7 @@
  * @return string
  */
 function minified_extension() {
-  return ENV_ENV === "development" ? "" : ".min";
+  return ENV_ENV === 'development' ? '' : '.min';
 }
 
 /**
@@ -24,7 +24,7 @@ function get_instagram_feed() {
   $user_id = ENV_INSTAGRAM_USER_ID;
   $access_token = ENV_INSTAGRAM_ACCESS_TOKEN;
   $count = 6;
-  $template = get_template_directory() . "/templates/instagram_feed.php";
+  $template = get_template_directory() . '/templates/instagram_feed.php';
 
   $instagram_feed = new InstagramFeed($user_id, $access_token, $count, $template);
 
@@ -63,12 +63,12 @@ function include_partial($name, $data) {
  * @param string $order
  * @return object
  */
-function get_archive_posts($post_type, $per_page = 5, $order = "DESC") {
+function get_archive_posts($post_type, $per_page = 5, $order = 'DESC') {
   return new WP_Query(
     array(
-      "post_type" => $post_type,
-      "posts_per_page" => $per_page,
-      "order" => $order,
+      'post_type' => $post_type,
+      'posts_per_page' => $per_page,
+      'order' => $order,
     )
   );
 }
