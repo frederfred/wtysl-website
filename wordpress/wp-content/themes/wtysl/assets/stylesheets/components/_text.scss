@@ -38,7 +38,7 @@ $sizes: (
       $map: map-get($sizes, $breakpoint);
 
       @include breakpoint($breakpoint) {
-        font-size: map-get($map, font-size) * 1.4;
+        font-size: round(map-get($map, font-size) * 1.4);
         margin-bottom:  map-get($map, margin-bottom);
       }
     }
