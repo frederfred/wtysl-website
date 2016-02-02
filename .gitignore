@@ -21,6 +21,11 @@ wordpress/wp-content/index.php
 wordpress/wp-content/plugins
 wordpress/wp-content/uploads
 wordpress/wp-content/themes/*
+wordpress/wp-content/advanced-cache.php
+wordpress/wp-content/cache/
+wordpress/wp-content/db.php
+wordpress/wp-content/object-cache.php
+wordpress/wp-content/w3tc-config/
 !wordpress/wp-content/themes/wtysl
 
 # Deploy settings

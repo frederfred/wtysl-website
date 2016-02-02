@@ -87,6 +87,9 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', ENV_WP_DEBUG);
 
+/** W3 Total Cache */
+define('WP_CACHE', ENV_WP_CACHE);
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

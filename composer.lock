@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d943370e824905b917c6dd6b613dd10d",
-    "content-hash": "2e162641b2b47635b4bb07626e36e8e5",
+    "hash": "201380c187936c77f8e5bc0a30b8aedb",
+    "content-hash": "30b1924a1518ed2fb13f107cdc516066",
     "packages": [
         {
             "name": "composer/installers",
@@ -184,6 +184,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/w3-total-cache",
+            "version": "0.9.4.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/w3-total-cache/",
+                "reference": "tags/0.9.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",

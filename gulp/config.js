@@ -21,6 +21,8 @@ var exclude = [
   "wordpress/xmlrpc.php",
   "wordpress/wp-content/index.php",
   "wordpress/wp-content/uploads",
+  "wordpress/wp-content/cache",
+  "wordpress/wp-content/w3tc-config",
   "wordpress/wp-content/themes/index.php",
   "wordpress/wp-content/themes/wtysl/assets"
 ];
