@@ -21,12 +21,6 @@
 <?php endif; ?>
 
 <div class="Wrapper">
-  <h2 class="Headline Headline--2">Follow our journey on <a href="https://instagram.com/wtysl/" target="_blank">Instagram</a></h2>
-
-  <div class="u-trailer-xl">
-    <?php echo get_instagram_feed(); ?>
-  </div>
-
   <h2 class="Headline Headline--2">Our team</h2>
 
   <?php get_template_part('templates/co-workers'); ?>

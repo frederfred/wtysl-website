@@ -21,6 +21,10 @@
           </div>
         </div>
       </article>
+
+      <?php if (instagram_is_last_in_post()): ?>
+        <?php echo get_instagram_feed(); ?>
+      <?php endif; ?>
     </div>
   <?php endwhile; ?>
 <?php endif; ?>

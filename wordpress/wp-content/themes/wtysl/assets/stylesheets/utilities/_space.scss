@@ -3,3 +3,9 @@
     margin-bottom: $value;
   }
 }
+
+@each $name, $value in $space {
+  .u-leader-#{$name} {
+    margin-top: $value;
+  }
+}

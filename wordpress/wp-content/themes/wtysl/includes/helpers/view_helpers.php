@@ -88,3 +88,11 @@ function dashes_to_camel_case($str) {
 function has_odd_number_of_images() {
   return count(get_field('images')) % 2 != 0;
 }
+
+/**
+ * Check if [instagram] shortcode is last in post
+ * @return boolean
+ */
+function instagram_is_last_in_post() {
+  return preg_match("/\[instagram\]\z/", trim(get_the_content()));
+}
