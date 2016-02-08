@@ -128,7 +128,7 @@ $sizes: (
   // Element: Headline
   // ---------------------------------------------------------------------------
   &-headline {
-    font-size: 50px;
+    font-size: 40px;
 
     margin-bottom: $base-line-height;
 
@@ -148,7 +148,7 @@ $sizes: (
   // Element: Body
   // ---------------------------------------------------------------------------
   &-body {
-    font-size: $base-font-size * 1.5;
+    font-size: $base-font-size;
 
     @include breakpoint($medium) {
       font-size: $base-font-size * 2;
