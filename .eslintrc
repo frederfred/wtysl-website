@@ -1,29 +1,12 @@
 {
   "env": {
+    "es6": true,
     "node": true,
     "browser": true
   },
-
+  "parser": "babel-eslint",
+  "extends": "airbnb",
   "rules": {
-    "curly": 2,
-    "quotes": [2, "double", "avoid-escape"],
-    "no-console": 2,
-    // equality check ===
-    "eqeqeq": 2,
-    // Always give radix to parseInt
-    "radix": 2,
-    // "One true brace style http://eslint.org/docs/rules/brace-style.html
-    "brace-style": 2,
-    "no-spaced-func": 2,
-    "space-before-function-paren": [2, "never", "never"],
-    "space-before-blocks": [2, "always"],
-    "space-after-keywords": 2,
-    "no-use-before-define": 0,
-    "no-underscore-dangle": 0,
-    "camelcase": 0,
-    "no-shadow": 0,
-    "no-return-assign": 0,
-    "no-empty": 0,
-    "strict": [2, "never"]
+    "strict": [2, "global"]
   }
 }
