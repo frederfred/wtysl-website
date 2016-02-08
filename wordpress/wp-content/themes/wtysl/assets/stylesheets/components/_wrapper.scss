@@ -14,9 +14,11 @@ $component-base: ".#{$component-name}";
   margin-right: auto;
 
   &--tight {
-    max-width: none;
+    @include breakpoint($medium) {
+      max-width: none;
 
-    padding-left: $gutter-m;
-    padding-right: $gutter-m;
+      padding-left: $gutter-m;
+      padding-right: $gutter-m;
+    }
   }
 }
