@@ -8,7 +8,11 @@ $component-base: ".#{$component-name}";
 #{$component-base} {
   outline: 0; // Tabindex is defined for accessibilty reasons
 
-  margin-bottom: $base-line-height * 4;
+  margin-bottom: $base-line-height;
 
   overflow: hidden;
+
+  @include breakpoint($medium) {
+    margin-bottom: $base-line-height * 4;
+  }
 }
