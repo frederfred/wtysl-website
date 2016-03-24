@@ -4,6 +4,15 @@
   <?php while (have_posts()): ?>
     <?php the_post(); ?>
 
+    <?php $featured_image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>
+    <?php $headline_color = dashes_to_camel_case(get_field('headline_color')); ?>
+
+    <?php if ($featured_image_src): ?>
+      <div class="FeaturedImage" style="background-image: url(<?php echo $featured_image_src; ?>);">
+        <h1 class="FeaturedImage-headline FeaturedImage-headline--<?php echo $headline_color; ?> Headline Headline--1"><?php the_title(); ?></h1>
+      </div>
+    <?php endif; ?>
+
     <div class="Wrapper u-trailer-xl">
       <article class="Grid Grid--center-12-8">
         <div class="Grid-item">
