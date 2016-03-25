@@ -38,7 +38,7 @@ $featured_projects = new WP_Query(
 <div class="Wrapper">
   <?php if ($featured_projects->have_posts()): ?>
     <div class="u-trailer-xl">
-      <h2 class="Headline Headline--2 u-textCenter">Projects</h2>
+      <h2 class="Headline Headline--2 u-textCenter">Latest and greatest</h2>
 
       <ul class="Grid Grid--12-4 u-listPlain">
         <?php while ($featured_projects->have_posts()): ?>
