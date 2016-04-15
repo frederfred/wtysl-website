@@ -104,6 +104,8 @@ $sizes: (
   // Element: Text Inner
   // ---------------------------------------------------------------------------
   &-textInner {
+    @include color-variants;
+
     text-align: center;
 
     @include breakpoint(0 $to-medium) {
@@ -116,8 +118,8 @@ $sizes: (
       padding-right: $gutter-m;
     }
 
-    @include breakpoint($small-medium) {
-      color: $color-white;
+    @include breakpoint(0 $to-small-medium) {
+      color: $color-black;
     }
 
     @include breakpoint($large) {

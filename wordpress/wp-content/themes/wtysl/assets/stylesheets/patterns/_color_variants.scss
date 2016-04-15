@@ -1,0 +1,25 @@
+@mixin color-variants {
+  // Variant: Color Black
+  // -------------------------------------------------------------------------
+  &--colorBlack {
+    color: $color-black;
+  }
+
+  // Variant: Color White
+  // -------------------------------------------------------------------------
+  &--colorWhite {
+    color: $color-white;
+  }
+
+  // Variant: Color Yellow
+  // -------------------------------------------------------------------------
+  &--colorYellow {
+    color: $color-yellow;
+  }
+
+  // Variant: Color Dark Blue-Grey
+  // -------------------------------------------------------------------------
+  &--colorDarkBlueGrey {
+    color: $color-dark-blue-grey;
+  }
+}

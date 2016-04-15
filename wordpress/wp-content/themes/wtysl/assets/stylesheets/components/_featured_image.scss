@@ -51,36 +51,14 @@ $sizes: (
   // Element: Headline
   // ---------------------------------------------------------------------------
   & &-headline { // Specificity hack
+    @include color-variants;
+
     @each $breakpoint, $val in $sizes {
       $map: map-get($sizes, $breakpoint);
 
       @include breakpoint($breakpoint) {
         font-size: map-get($map, font-size);
       }
-    }
-
-    // Variant: Color Black
-    // -------------------------------------------------------------------------
-    &--colorBlack {
-      color: $color-black;
-    }
-
-    // Variant: Color White
-    // -------------------------------------------------------------------------
-    &--colorWhite {
-      color: $color-white;
-    }
-
-    // Variant: Color Yellow
-    // -------------------------------------------------------------------------
-    &--colorYellow {
-      color: $color-yellow;
-    }
-
-    // Variant: Color Dark Blue-Grey
-    // -------------------------------------------------------------------------
-    &--colorDarkBlueGrey {
-      color: $color-dark-blue-grey;
     }
   }
 }

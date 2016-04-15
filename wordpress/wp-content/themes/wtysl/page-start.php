@@ -14,6 +14,7 @@ $featured_projects = new WP_Query(
 <?php if (have_posts()): ?>
   <?php while (have_posts()): ?>
     <?php the_post(); ?>
+    <?php $headline_color = dashes_to_camel_case(get_field('headline_color')); ?>
 
     <div class="MediaIntro">
       <div class="MediaIntro-imageWrapper">
@@ -22,7 +23,7 @@ $featured_projects = new WP_Query(
 
       <div class="MediaIntro-textWrapper">
         <div class="MediaIntro-text">
-          <div class="MediaIntro-textInner">
+          <div class="MediaIntro-textInner MediaIntro-textInner--<?php echo $headline_color; ?>">
             <h1 class="Headline Headline--1 MediaIntro-headline"><?php the_field('headline'); ?></h1>
 
             <div class="MediaIntro-body">
