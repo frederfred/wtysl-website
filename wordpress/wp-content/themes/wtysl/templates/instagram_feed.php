@@ -4,7 +4,7 @@
   </article>
 <?php endif; ?>
 
-<div class="u-leader-l<?php echo instagram_is_last_in_post() ? '' : ' u-trailer-l'; ?>">
+<div class="u-leader-xl<?php echo instagram_is_last_in_post() ? '' : ' u-trailer-l'; ?>">
   <div class="Grid Grid--6-3-2">
     <?php foreach ($data->data as $media): ?>
       <div class="Grid-item">
