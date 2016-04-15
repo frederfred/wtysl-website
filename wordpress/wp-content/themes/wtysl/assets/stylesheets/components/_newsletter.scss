@@ -5,22 +5,29 @@
 $component-name: "Newsletter";
 $component-base: ".#{$component-name}";
 
+$input-border-radius: 10px;
+
 #{$component-base} {
   max-width: 560px;
 
-  padding: $base-line-height;
+  padding-top: $base-line-height;
+  padding-bottom: $base-line-height;
+  padding-left: $base-line-height / 2;
+  padding-right: $base-line-height / 2;
 
   margin-left: auto;
   margin-right: auto;
 
-  background: $color-yellow;
+  background: $color-dark-blue-grey;
+  color: $color-white;
 
   text-align: center;
 
-  // Element: Label
+  // Element: Input Wrapper
   // ---------------------------------------------------------------------------
-  &-label {
-    margin-right: 10px;
+  &-inputWrapper {
+    display: flex;
+    justify-content: center;
   }
 
   // Element: Input
@@ -29,21 +36,19 @@ $component-base: ".#{$component-name}";
     @extend %form-input;
 
     width: 100%;
+    max-width: 320px;
 
-    margin-bottom: $space-s;
-
-    @include breakpoint($small-medium) {
-      max-width: 280px;
-
-      margin-right: 10px;
-      margin-bottom: 0;
-    }
+    border-radius: $input-border-radius 0 0 $input-border-radius;
   }
 
   // Element: Submit
   // ---------------------------------------------------------------------------
   &-submit {
     @extend %form-input;
+
+    border-radius: 0 $input-border-radius $input-border-radius 0;
+
+    background: $color-yellow;
 
     &:hover {
       background: $color-yellow-light;
