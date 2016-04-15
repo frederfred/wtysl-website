@@ -71,8 +71,8 @@ $sizes: (
     background-size: cover;
     background-position: 50% 50%;
 
-    @include breakpoint($small-medium) {
-      opacity: $image-opacity;
+    @include breakpoint(0 $to-small-medium) {
+      opacity: 1 !important;
     }
   }
 

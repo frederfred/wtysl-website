@@ -17,7 +17,7 @@ $featured_projects = new WP_Query(
 
     <div class="MediaIntro">
       <div class="MediaIntro-imageWrapper">
-        <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>);"></div>
+        <div class="MediaIntro-image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>); opacity: <?php the_field('opacity'); ?>;"></div>
       </div>
 
       <div class="MediaIntro-textWrapper">
