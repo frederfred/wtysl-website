@@ -15,6 +15,19 @@ if(function_exists("register_field_group"))
         'toolbar' => 'basic',
         'media_upload' => 'no',
       ),
+      array (
+        'key' => 'field_57107c14b5309',
+        'label' => 'Opacity',
+        'name' => 'opacity',
+        'type' => 'text',
+        'instructions' => 'A value between 0 and 1 (e.g. 0.5).',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => '',
+      ),
     ),
     'location' => array (
       array (
