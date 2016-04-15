@@ -8,8 +8,12 @@
   <div class="Grid Grid--6-3-2">
     <?php foreach ($data->data as $media): ?>
       <div class="Grid-item">
-        <a href="<?php echo $media->link; ?>" class="FlexEmbed FlexEmbed--1by1 u-trailer-s" target="_blank">
-          <img src="<?php echo $media->images->standard_resolution->url; ?>" class="FlexEmbed-item">
+        <a href="<?php echo $media->link; ?>" class="u-trailer-s MediaItem" target="_blank">
+          <div class="MediaItem-inner">
+            <div class="FlexEmbed FlexEmbed--1by1">
+              <img src="<?php echo $media->images->standard_resolution->url; ?>" class="FlexEmbed-item">
+            </div>
+          </div>
         </a>
       </div>
     <?php endforeach; ?>

@@ -1,0 +1,14 @@
+//
+// Component: Media Item
+// =============================================================================
+
+$component-name: "MediaItem";
+$component-base: ".#{$component-name}";
+
+#{$component-base} {
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
