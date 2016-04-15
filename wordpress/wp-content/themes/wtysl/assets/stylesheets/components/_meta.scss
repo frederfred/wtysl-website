@@ -11,4 +11,10 @@ $component-base: ".#{$component-name}";
   text-overflow: ellipsis;
   font-family: $meta-font-family;
   font-size: 16px;
+
+  // Variant: Before
+  // ---------------------------------------------------------------------------
+  &--handwriting {
+    font-family: $handwriting-font-family;
+  }
 }

@@ -39,7 +39,10 @@ $featured_projects = new WP_Query(
 <div class="Wrapper">
   <?php if ($featured_projects->have_posts()): ?>
     <div class="u-trailer-xl">
-      <h2 class="Headline Headline--2 u-textCenter">Latest and greatest</h2>
+      <h2 class="Headline Headline--2 u-textCenter">
+        Latest and greatest
+        <div><a href="<?php echo get_post_type_archive_link('project'); ?>" class="Meta Meta--handwriting">See all projects</a></div>
+      </h2>
 
       <ul class="Grid Grid--12-4 u-listPlain">
         <?php while ($featured_projects->have_posts()): ?>
@@ -68,10 +71,6 @@ $featured_projects = new WP_Query(
           </li>
         <?php endwhile; ?>
       </ul>
-
-      <div class="u-textCenter Meta">
-        <a href="<?php echo get_post_type_archive_link('project'); ?>">See all projects</a>
-      </div>
     </div>
   <?php endif; ?>
 
