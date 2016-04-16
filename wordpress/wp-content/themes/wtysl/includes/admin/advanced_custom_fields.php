@@ -12,7 +12,7 @@ if(function_exists("register_field_group"))
         'name' => 'headline',
         'type' => 'wysiwyg',
         'default_value' => '',
-        'toolbar' => 'basic',
+        'toolbar' => 'full',
         'media_upload' => 'no',
       ),
       array (
