@@ -18,11 +18,9 @@
         <div class="Grid-item">
           <h1 class="Headline Headline--1 u-visuallyhidden"><?php the_title(); ?></h1>
 
-          <div class="Text u-trailer-xl">
+          <div class="Text">
             <?php the_content(); ?>
           </div>
-
-          <?php get_template_part('templates/newsletter_form'); ?>
         </div>
       </article>
     </div>
@@ -32,7 +30,11 @@
 <div class="Wrapper">
   <h2 class="Headline Headline--2 u-textCenter">Our team</h2>
 
-  <?php get_template_part('templates/co-workers'); ?>
+  <div class="u-trailer-xl">
+    <?php get_template_part('templates/co-workers'); ?>
+  </div>
+
+  <?php get_template_part('templates/newsletter_form'); ?>
 </div>
 
 <?php get_footer(); ?>
