@@ -30,7 +30,7 @@
 <?php endif; ?>
 
 <div class="Wrapper">
-  <h2 class="Headline Headline--2">Our team</h2>
+  <h2 class="Headline Headline--2 u-textCenter">Our team</h2>
 
   <?php get_template_part('templates/co-workers'); ?>
 </div>
