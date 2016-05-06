@@ -1,1 +1,1 @@
-require('./vendor/modernizr');
+import './components/html-classes';
